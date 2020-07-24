@@ -1,0 +1,61 @@
+# Star-Spores_CoCo - Build Notes
+
+How to Build the code in this repository
+
+## Memory Map
+
+Start Addr | End Addr | Module # | Source File | Function
+-----------|----------|-----------|-------------|---------
+$2D00 | $4D4B | 1 | SPORES.ASM | Main Program
+$4D4C | $4DFF | - | - | (unused)
+$4E00 | $511E | 2 | XPLODE.ASM | Ship Explosion
+$511F | $517D | - | - | (unused)
+$517E | $526C | 3 | BONUS.ASM | Bonus Round
+$526D | $55B4 | 4 | DATA1 | Bonus Round
+$55B5 | $563D | 5 | PUTSPR.ASM | Drawing of Aliens
+$563E | $5AA5 | 6 | DATA2 | Data
+$5AA6 | $5BDB | 7 | LINDRW.ASM | Line Draw Routine
+$5BDC | $5CC6 | 8 | DATA3 | Data
+$5CC7 | $5D0A | 9 | SOUND.ASM | Sound Routine
+$5D08 | $5D8C | 10 | NOISE.ASM | Noise (random sound) Routine
+$5D8D | $5DC3 | 11 | SETPT.ASM | Graphic Function to set a point
+$5DC4 | $66EA | 12 | DATA4 | Data
+
+## Background of original code environment
+
+The game was written in 6809 assembler on a 32K Color Computer with
+Extended Color Basic, plus Disk controller and Shugart-type disk drives.
+Radio Shack's Disk Extended Color BASIC was embedded in the disk controller,
+and Radio Shack's "Disk EDTASM" Editor/Assembler was used to manage and
+assemble the original source.  Some data was also prepared by hand, and entered
+using ZBUG (included with Disk EDTASM).
+
+As the source code was too large to be assembled as a single source file,
+the code was broken into several pieces, with values of some key labels
+being tracked by hand, and adjusted in the referencing source modules if
+the values were to change.
+
+As these modules were consuming most of the RAM needed in order to
+execute an assembly, comments were not able to be kept in the source
+code; rather, they were often managed separately by hand on paper.
+
+The data in this repository is a reconstruction of the notes I archived at the
+completion of the game.
+
+## Code Reconstruction
+
+The code has been re-entered into DISK EDTASM on a Color Computer Emulator,
+and saved to disk in .DSK (.JVC) format.
+
+Then, each of the source files was extracted using 'imgtool' from the MAME distribution:
+
+`imgtool get coco_jvc_rsdos SPORES.DSK SPORES.ASM --filter=ascii`
+
+Following this, comments were added to the extracted files.
+
+
+## How to Build:
+
+### 1. On Original Machine or Emulated Color Computer:
+
+### 2. Cross-Assembly on a Modern PC
