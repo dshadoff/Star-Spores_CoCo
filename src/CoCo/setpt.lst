@@ -1,0 +1,40 @@
+                      (                       SETPT.ASM):00001 00001   ORG     $5D8D
+5D8D 0E00             (                       SETPT.ASM):00002 00002 SCRST     FDB     $E00
+5D8F 3436             (                       SETPT.ASM):00003 00003 SET       PSHS    Y,X,B,A
+5D91 B65DBF           (                       SETPT.ASM):00004 00004   LDA     YPOS
+5D94 C620             (                       SETPT.ASM):00005 00005   LDB     #$20
+5D96 BE5D8D           (                       SETPT.ASM):00006 00006   LDX     SCRST
+5D99 3D               (                       SETPT.ASM):00007 00007   MUL
+5D9A 308B             (                       SETPT.ASM):00008 00008   LEAX    D,X
+5D9C F65DBE           (                       SETPT.ASM):00009 00009   LDB     XPOS
+5D9F 54               (                       SETPT.ASM):00010 00010   LSRB
+5DA0 54               (                       SETPT.ASM):00011 00011   LSRB
+5DA1 3A               (                       SETPT.ASM):00012 00012   ABX
+5DA2 B65DBE           (                       SETPT.ASM):00013 00013   LDA     XPOS
+5DA5 8403             (                       SETPT.ASM):00014 00014   ANDA    #3
+5DA7 108E5DC0         (                       SETPT.ASM):00015 00015   LDY     #TABLE
+5DAB A6A6             (                       SETPT.ASM):00016 00016   LDA     A,Y
+5DAD 1F89             (                       SETPT.ASM):00017 00017   TFR     A,B
+5DAF 53               (                       SETPT.ASM):00018 00018   COMB
+5DB0 E484             (                       SETPT.ASM):00019 00019   ANDB    ,X
+5DB2 B45DBD           (                       SETPT.ASM):00020 00020   ANDA    COLOR
+5DB5 E7E2             (                       SETPT.ASM):00021 00021   STB     ,-S
+5DB7 AAE0             (                       SETPT.ASM):00022 00022   ORA     ,S+
+5DB9 A784             (                       SETPT.ASM):00023 00023   STA     ,X
+5DBB 35B6             (                       SETPT.ASM):00024 00024   PULS    A,B,X,Y,PC
+5DBD 00               (                       SETPT.ASM):00025 00025 COLOR     FCB     0
+5DBE 00               (                       SETPT.ASM):00026 00026 XPOS      FCB     0
+5DBF 00               (                       SETPT.ASM):00027 00027 YPOS      FCB     0
+5DC0 C0               (                       SETPT.ASM):00028 00028 TABLE     FCB     $C0
+5DC1 30               (                       SETPT.ASM):00029 00029   FCB     $30
+5DC2 0C               (                       SETPT.ASM):00030 00030   FCB     $0C
+5DC3 03               (                       SETPT.ASM):00031 00031   FCB     $03
+                      (                       SETPT.ASM):00032 00032   END
+
+Symbol Table:
+[ G] COLOR                            5DBD
+[ G] SCRST                            5D8D
+[ G] SET                              5D8F
+[ G] TABLE                            5DC0
+[ G] XPOS                             5DBE
+[ G] YPOS                             5DBF

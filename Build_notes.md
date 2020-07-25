@@ -1,6 +1,6 @@
 # Star-Spores_CoCo - Build Notes
 
-How to Build the code in this repository
+How to build the code in this repository
 
 ## Memory Map
 
@@ -51,11 +51,16 @@ Then, each of the source files was extracted using 'imgtool' from the MAME distr
 
 `imgtool get coco_jvc_rsdos SPORES.DSK SPORES.ASM --filter=ascii`
 
-Following this, comments were added to the extracted files.
-
+The files were built using 'lwasm' from the lwtools set, which can be found here:
+[http://www.lwtools.ca/](http://www.lwtools.ca/)
 
 ## How to Build:
 
 ### 1. On Original Machine or Emulated Color Computer:
 
+(to be added)
+
 ### 2. Cross-Assembly on a Modern PC
+
+(to be added)
+

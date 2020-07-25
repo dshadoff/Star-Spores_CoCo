@@ -1,0 +1,167 @@
+                      (                      LINDRW.ASM):00001 00001   ORG     $5AA6
+5AA6 3436             (                      LINDRW.ASM):00002 00002 LINE      PSHS    Y,X,B,A
+5AA8 B65BCB           (                      LINDRW.ASM):00003 00003   LDA     STARTX
+5AAB B05BC9           (                      LINDRW.ASM):00004 00004   SUBA    ENDX
+5AAE 260D             (                      LINDRW.ASM):00005 00005   BNE     LINE1
+5AB0 B65BCD           (                      LINDRW.ASM):00006 00006   LDA     STARTY
+5AB3 B05BC7           (                      LINDRW.ASM):00007 00007   SUBA    ENDY
+5AB6 2605             (                      LINDRW.ASM):00008 00008   BNE     LINE1
+5AB8 BD5B63           (                      LINDRW.ASM):00009 00009   JSR     SET
+5ABB 35B6             (                      LINDRW.ASM):00010 00010   PULS    A,B,X,Y,PC
+5ABD FC5BC9           (                      LINDRW.ASM):00011 00011 LINE1     LDD     ENDX
+5AC0 1F89             (                      LINDRW.ASM):00012 00012   TFR     A,B
+5AC2 4F               (                      LINDRW.ASM):00013 00013   CLRA
+5AC3 FD5BDA           (                      LINDRW.ASM):00014 00014   STD     STO1
+5AC6 FC5BCB           (                      LINDRW.ASM):00015 00015   LDD     STARTX
+5AC9 1F89             (                      LINDRW.ASM):00016 00016   TFR     A,B
+5ACB 4F               (                      LINDRW.ASM):00017 00017   CLRA
+5ACC FD5BD8           (                      LINDRW.ASM):00018 00018   STD     D1
+5ACF FC5BDA           (                      LINDRW.ASM):00019 00019   LDD     STO1
+5AD2 B35BD8           (                      LINDRW.ASM):00020 00020   SUBD    D1
+5AD5 FD5BCF           (                      LINDRW.ASM):00021 00021   STD     DIRX
+5AD8 FC5BC7           (                      LINDRW.ASM):00022 00022   LDD     ENDY
+5ADB 1F89             (                      LINDRW.ASM):00023 00023   TFR     A,B
+5ADD 4F               (                      LINDRW.ASM):00024 00024   CLRA
+5ADE FD5BDA           (                      LINDRW.ASM):00025 00025   STD     STO1
+5AE1 FC5BCD           (                      LINDRW.ASM):00026 00026   LDD     STARTY
+5AE4 1F89             (                      LINDRW.ASM):00027 00027   TFR     A,B
+5AE6 4F               (                      LINDRW.ASM):00028 00028   CLRA
+5AE7 FD5BD8           (                      LINDRW.ASM):00029 00029   STD     D1
+5AEA FC5BDA           (                      LINDRW.ASM):00030 00030   LDD     STO1
+5AED B35BD8           (                      LINDRW.ASM):00031 00031   SUBD    D1
+5AF0 FD5BD1           (                      LINDRW.ASM):00032 00032   STD     DIRY
+5AF3 1F01             (                      LINDRW.ASM):00033 00033   TFR     D,X
+5AF5 FC5BD8           (                      LINDRW.ASM):00034 00034   LDD     D1
+5AF8 FD5BDA           (                      LINDRW.ASM):00035 00035   STD     STO1
+5AFB BF5BD8           (                      LINDRW.ASM):00036 00036   STX     D1
+5AFE FC5BCF           (                      LINDRW.ASM):00037 00037   LDD     DIRX
+5B01 FD5BDA           (                      LINDRW.ASM):00038 00038   STD     STO1
+5B04 B65BDB           (                      LINDRW.ASM):00039 00039   LDA     STO2
+5B07 8480             (                      LINDRW.ASM):00040 00040   ANDA    #$80
+5B09 B75BD6           (                      LINDRW.ASM):00041 00041   STA     STO5
+5B0C B65BD9           (                      LINDRW.ASM):00042 00042   LDA     STO3
+5B0F 8480             (                      LINDRW.ASM):00043 00043   ANDA    #$80
+5B11 B75BD7           (                      LINDRW.ASM):00044 00044   STA     STO4
+5B14 785BDB           (                      LINDRW.ASM):00045 00045 SHIFT     ASL     STO2
+5B17 785BD9           (                      LINDRW.ASM):00046 00046   ASL     STO3
+5B1A B65BDB           (                      LINDRW.ASM):00047 00047   LDA     STO2
+5B1D 8480             (                      LINDRW.ASM):00048 00048   ANDA    #$80
+5B1F B15BD6           (                      LINDRW.ASM):00049 00049   CMPA    STO5
+5B22 260A             (                      LINDRW.ASM):00050 00050   BNE     DSHIFT
+5B24 B65BD9           (                      LINDRW.ASM):00051 00051   LDA     STO3
+5B27 8480             (                      LINDRW.ASM):00052 00052   ANDA    #$80
+5B29 B15BD7           (                      LINDRW.ASM):00053 00053   CMPA    STO4
+5B2C 27E6             (                      LINDRW.ASM):00054 00054   BEQ     SHIFT
+5B2E FC5BDA           (                      LINDRW.ASM):00055 00055 DSHIFT    LDD     STO1
+5B31 FD5BCF           (                      LINDRW.ASM):00056 00056   STD     DIRX
+5B34 FC5BD8           (                      LINDRW.ASM):00057 00057   LDD     D1
+5B37 FD5BD1           (                      LINDRW.ASM):00058 00058   STD     DIRY
+5B3A BD5B63           (                      LINDRW.ASM):00059 00059 NXTBLO    JSR     SET
+5B3D FC5BC9           (                      LINDRW.ASM):00060 00060   LDD     ENDX
+5B40 B35BCB           (                      LINDRW.ASM):00061 00061   SUBD    STARTX
+5B43 2714             (                      LINDRW.ASM):00062 00062   BEQ     MAYBE
+5B45 FC5BCB           (                      LINDRW.ASM):00063 00063 NOTYET    LDD     STARTX
+5B48 F35BCF           (                      LINDRW.ASM):00064 00064   ADDD    DIRX
+5B4B FD5BCB           (                      LINDRW.ASM):00065 00065   STD     STARTX
+5B4E FC5BCD           (                      LINDRW.ASM):00066 00066   LDD     STARTY
+5B51 F35BD1           (                      LINDRW.ASM):00067 00067   ADDD    DIRY
+5B54 FD5BCD           (                      LINDRW.ASM):00068 00068   STD     STARTY
+5B57 20E1             (                      LINDRW.ASM):00069 00069   BRA     NXTBLO
+5B59 FC5BC7           (                      LINDRW.ASM):00070 00070 MAYBE     LDD     ENDY
+5B5C B35BCD           (                      LINDRW.ASM):00071 00071   SUBD    STARTY
+5B5F 26E4             (                      LINDRW.ASM):00072 00072   BNE     NOTYET
+5B61 35B6             (                      LINDRW.ASM):00073 00073   PULS    A,B,X,Y,PC
+5B63 3436             (                      LINDRW.ASM):00074 00074 SET       PSHS    Y,X,B,A
+5B65 FC5BCB           (                      LINDRW.ASM):00075 00075   LDD     STARTX
+5B68 C580             (                      LINDRW.ASM):00076 00076   BITB    #$80
+5B6A 2701             (                      LINDRW.ASM):00077 00077   BEQ     NOINC
+5B6C 4C               (                      LINDRW.ASM):00078 00078   INCA
+5B6D B75BD3           (                      LINDRW.ASM):00079 00079 NOINC     STA     XPOS
+5B70 FC5BCD           (                      LINDRW.ASM):00080 00080   LDD     STARTY
+5B73 C580             (                      LINDRW.ASM):00081 00081   BITB    #$80
+5B75 2701             (                      LINDRW.ASM):00082 00082   BEQ     NOINC1
+5B77 4C               (                      LINDRW.ASM):00083 00083   INCA
+5B78 B75BD4           (                      LINDRW.ASM):00084 00084 NOINC1    STA     YPOS
+5B7B F65BD4           (                      LINDRW.ASM):00085 00085   LDB     YPOS
+5B7E 4F               (                      LINDRW.ASM):00086 00086   CLRA
+5B7F 54               (                      LINDRW.ASM):00087 00087   LSRB
+5B80 54               (                      LINDRW.ASM):00088 00088   LSRB
+5B81 5C               (                      LINDRW.ASM):00089 00089   INCB
+5B82 FD5CF2           (                      LINDRW.ASM):00090 00090   STD     $5CF2
+5B85 FD5D03           (                      LINDRW.ASM):00091 00091   STD     $5D03
+5B88 7D5BD5           (                      LINDRW.ASM):00092 00092   TST     COLOR
+5B8B 2706             (                      LINDRW.ASM):00093 00093   BEQ     NOSOND
+5B8D BD5CC8           (                      LINDRW.ASM):00094 00094   JSR     $5CC8
+5B90 BD5CC8           (                      LINDRW.ASM):00095 00095   JSR     $5CC8
+5B93 BE5D8D           (                      LINDRW.ASM):00096 00096 NOSOND    LDX     $5D8D
+5B96 F65BD4           (                      LINDRW.ASM):00097 00097   LDB     YPOS
+5B99 8620             (                      LINDRW.ASM):00098 00098   LDA     #$20
+5B9B 3D               (                      LINDRW.ASM):00099 00099   MUL
+5B9C 308B             (                      LINDRW.ASM):00100 00100   LEAX    D,X
+5B9E B65BD3           (                      LINDRW.ASM):00101 00101   LDA     XPOS
+5BA1 1F89             (                      LINDRW.ASM):00102 00102   TFR     A,B
+5BA3 8403             (                      LINDRW.ASM):00103 00103   ANDA    #3
+5BA5 12               (                      LINDRW.ASM):00104 00104   NOP
+5BA6 54               (                      LINDRW.ASM):00105 00105   LSRB
+5BA7 54               (                      LINDRW.ASM):00106 00106   LSRB
+5BA8 3A               (                      LINDRW.ASM):00107 00107   ABX
+5BA9 108E5BBF         (                      LINDRW.ASM):00108 00108   LDY     #TABLE
+5BAD A6A6             (                      LINDRW.ASM):00109 00109   LDA     A,Y
+5BAF 1F89             (                      LINDRW.ASM):00110 00110   TFR     A,B
+5BB1 53               (                      LINDRW.ASM):00111 00111   COMB
+5BB2 E484             (                      LINDRW.ASM):00112 00112   ANDB    ,X
+5BB4 B45BD5           (                      LINDRW.ASM):00113 00113   ANDA    COLOR
+5BB7 A7E2             (                      LINDRW.ASM):00114 00114   STA     ,-S
+5BB9 EAE0             (                      LINDRW.ASM):00115 00115   ORB     ,S+
+5BBB E784             (                      LINDRW.ASM):00116 00116   STB     ,X
+5BBD 35B6             (                      LINDRW.ASM):00117 00117   PULS    A,B,X,Y,PC
+5BBF C0               (                      LINDRW.ASM):00118 00118 TABLE     FCB     $C0
+5BC0 30               (                      LINDRW.ASM):00119 00119   FCB     $30
+5BC1 0C               (                      LINDRW.ASM):00120 00120   FCB     $0C
+5BC2 03               (                      LINDRW.ASM):00121 00121   FCB     $03
+5BC3                  (                      LINDRW.ASM):00122 00122   RMB     4
+5BC7 0000             (                      LINDRW.ASM):00123 00123 ENDY      FDB     0
+5BC9 0000             (                      LINDRW.ASM):00124 00124 ENDX      FDB     0
+5BCB 0000             (                      LINDRW.ASM):00125 00125 STARTX    FDB     0
+5BCD 0000             (                      LINDRW.ASM):00126 00126 STARTY    FDB     0
+5BCF 0000             (                      LINDRW.ASM):00127 00127 DIRX      FDB     0
+5BD1 0000             (                      LINDRW.ASM):00128 00128 DIRY      FDB     0
+5BD3 00               (                      LINDRW.ASM):00129 00129 XPOS      FCB     0
+5BD4 00               (                      LINDRW.ASM):00130 00130 YPOS      FCB     0
+5BD5 00               (                      LINDRW.ASM):00131 00131 COLOR     FCB     0
+5BD6 00               (                      LINDRW.ASM):00132 00132 STO5      FCB     0
+5BD7 00               (                      LINDRW.ASM):00133 00133 STO4      FCB     0
+5BD8 00               (                      LINDRW.ASM):00134 00134 D1        FCB     0
+5BD9 00               (                      LINDRW.ASM):00135 00135 STO3      FCB     0
+5BDA 00               (                      LINDRW.ASM):00136 00136 STO1      FCB     0
+5BDB 00               (                      LINDRW.ASM):00137 00137 STO2      FCB     0
+                      (                      LINDRW.ASM):00138 00138   END     LINE
+
+Symbol Table:
+[ G] COLOR                            5BD5
+[ G] D1                               5BD8
+[ G] DIRX                             5BCF
+[ G] DIRY                             5BD1
+[ G] DSHIFT                           5B2E
+[ G] ENDX                             5BC9
+[ G] ENDY                             5BC7
+[ G] LINE                             5AA6
+[ G] LINE1                            5ABD
+[ G] MAYBE                            5B59
+[ G] NOINC                            5B6D
+[ G] NOINC1                           5B78
+[ G] NOSOND                           5B93
+[ G] NOTYET                           5B45
+[ G] NXTBLO                           5B3A
+[ G] SET                              5B63
+[ G] SHIFT                            5B14
+[ G] STARTX                           5BCB
+[ G] STARTY                           5BCD
+[ G] STO1                             5BDA
+[ G] STO2                             5BDB
+[ G] STO3                             5BD9
+[ G] STO4                             5BD7
+[ G] STO5                             5BD6
+[ G] TABLE                            5BBF
+[ G] XPOS                             5BD3
+[ G] YPOS                             5BD4
