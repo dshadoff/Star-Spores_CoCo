@@ -43,13 +43,13 @@ LOOP1	LDA	,X	; Put byte on screen
 	DEC	$563E	; Finish loop
 	BNE	LOOP
 	RTS
-ERSPOR	TST	10,U	; If dead, delay and return
+ERSPOR	TST	10,U	; If Nastie is dead, delay and return
 	BNE	ERSPR1
 	LDX	#50
 DELOP1	LEAX	-1,X
 	BNE	DELOP1
 	RTS
-ERSPR1	LDB	#$20	; Get screen position of Nestie's first byte
+ERSPR1	LDB	#$20	; Get screen position of Nastie's first byte
 	LDA	1,U
 	MUL
 	LDX	$5D8D

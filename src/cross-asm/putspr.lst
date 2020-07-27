@@ -43,13 +43,13 @@
 5609 7A563E           (                      PUTSPR.ASM):00043         DEC     $563E   ; Finish loop
 560C 26E6             (                      PUTSPR.ASM):00044         BNE     LOOP
 560E 39               (                      PUTSPR.ASM):00045         RTS
-560F 6D4A             (                      PUTSPR.ASM):00046 ERSPOR  TST     10,U    ; If dead, delay and return
+560F 6D4A             (                      PUTSPR.ASM):00046 ERSPOR  TST     10,U    ; If Nastie is dead, delay and return
 5611 2608             (                      PUTSPR.ASM):00047         BNE     ERSPR1
 5613 8E0032           (                      PUTSPR.ASM):00048         LDX     #50
 5616 301F             (                      PUTSPR.ASM):00049 DELOP1  LEAX    -1,X
 5618 26FC             (                      PUTSPR.ASM):00050         BNE     DELOP1
 561A 39               (                      PUTSPR.ASM):00051         RTS
-561B C620             (                      PUTSPR.ASM):00052 ERSPR1  LDB     #$20    ; Get screen position of Nestie's first byte
+561B C620             (                      PUTSPR.ASM):00052 ERSPR1  LDB     #$20    ; Get screen position of Nastie's first byte
 561D A641             (                      PUTSPR.ASM):00053         LDA     1,U
 561F 3D               (                      PUTSPR.ASM):00054         MUL
 5620 BE5D8D           (                      PUTSPR.ASM):00055         LDX     $5D8D
