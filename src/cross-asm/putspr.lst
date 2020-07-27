@@ -1,0 +1,83 @@
+                      (                      PUTSPR.ASM):00001         ORG     $55B5
+55B5 6D4A             (                      PUTSPR.ASM):00002 PUTSPR  TST     10,U    ; Check if Nastie (pointed to by U) is dead.
+55B7 2601             (                      PUTSPR.ASM):00003         BNE     PTSPR1  ; If so, return
+55B9 39               (                      PUTSPR.ASM):00004         RTS
+55BA 108E5E28         (                      PUTSPR.ASM):00005 PTSPR1  LDY     #$5E28  ; Stick real x & y lengths in his data (in
+55BE A645             (                      PUTSPR.ASM):00006         LDA     5,U     ; case it was hatched since the last time
+55C0 8E5DC4           (                      PUTSPR.ASM):00007         LDX     #$5DC4  ; it was displayed).
+55C3 E686             (                      PUTSPR.ASM):00008         LDB     A,X
+55C5 E742             (                      PUTSPR.ASM):00009         STB     2,U
+55C7 8E5DCD           (                      PUTSPR.ASM):00010         LDX     #$5DCD
+55CA E686             (                      PUTSPR.ASM):00011         LDB     A,X
+55CC E743             (                      PUTSPR.ASM):00012         STB     3,U
+55CE 48               (                      PUTSPR.ASM):00013         LSLA            ; Get location of table for different
+55CF 10AEA6           (                      PUTSPR.ASM):00014         LDY     A,Y     ; animation shots of Nastie.
+55D2 A644             (                      PUTSPR.ASM):00015         LDA     4,U     ; Get location of table for different
+55D4 48               (                      PUTSPR.ASM):00016         LSLA            ; pixel-within-byte shots of character.
+55D5 10AEA6           (                      PUTSPR.ASM):00017         LDY     A,Y
+55D8 E6C4             (                      PUTSPR.ASM):00018         LDB     ,U      ; Get screen location of Nastie (except
+55DA 1F98             (                      PUTSPR.ASM):00019         TFR     B,A     ; vertical pos).
+55DC BE5D8D           (                      PUTSPR.ASM):00020         LDX     $5D8D
+55DF 54               (                      PUTSPR.ASM):00021         LSRB
+55E0 54               (                      PUTSPR.ASM):00022         LSRB
+55E1 3A               (                      PUTSPR.ASM):00023         ABX
+55E2 8403             (                      PUTSPR.ASM):00024         ANDA    #$3     ; Y now points to character's graphic data
+55E4 48               (                      PUTSPR.ASM):00025         LSLA
+55E5 10AEA6           (                      PUTSPR.ASM):00026         LDY     A,Y
+55E8 E643             (                      PUTSPR.ASM):00027         LDB     3,U     ; # pixels high -> store it for a loop
+55EA F7563E           (                      PUTSPR.ASM):00028         STB     $563E
+55ED C620             (                      PUTSPR.ASM):00029         LDB     #$20    ; Add vertical offset for real screen position.
+55EF A641             (                      PUTSPR.ASM):00030         LDA     1,U
+55F1 3D               (                      PUTSPR.ASM):00031         MUL
+55F2 308B             (                      PUTSPR.ASM):00032         LEAX    D,X
+55F4 E642             (                      PUTSPR.ASM):00033 LOOP    LDB     2,U     ; # of bytes wide - store it for a loop
+55F6 F7563F           (                      PUTSPR.ASM):00034         STB     $563F
+55F9 C620             (                      PUTSPR.ASM):00035         LDB     #$20
+55FB A684             (                      PUTSPR.ASM):00036 LOOP1   LDA     ,X      ; Put byte on screen
+55FD AAA0             (                      PUTSPR.ASM):00037         ORA     ,Y+
+55FF A780             (                      PUTSPR.ASM):00038         STA     ,X+
+5601 5A               (                      PUTSPR.ASM):00039         DECB            ; Fix counters
+5602 7A563F           (                      PUTSPR.ASM):00040         DEC     $563F
+5605 26F4             (                      PUTSPR.ASM):00041         BNE     LOOP1
+5607 3085             (                      PUTSPR.ASM):00042         LEAX    B,X     ; Next line's start position
+5609 7A563E           (                      PUTSPR.ASM):00043         DEC     $563E   ; Finish loop
+560C 26E6             (                      PUTSPR.ASM):00044         BNE     LOOP
+560E 39               (                      PUTSPR.ASM):00045         RTS
+560F 6D4A             (                      PUTSPR.ASM):00046 ERSPOR  TST     10,U    ; If dead, delay and return
+5611 2608             (                      PUTSPR.ASM):00047         BNE     ERSPR1
+5613 8E0032           (                      PUTSPR.ASM):00048         LDX     #50
+5616 301F             (                      PUTSPR.ASM):00049 DELOP1  LEAX    -1,X
+5618 26FC             (                      PUTSPR.ASM):00050         BNE     DELOP1
+561A 39               (                      PUTSPR.ASM):00051         RTS
+561B C620             (                      PUTSPR.ASM):00052 ERSPR1  LDB     #$20    ; Get screen position of Nestie's first byte
+561D A641             (                      PUTSPR.ASM):00053         LDA     1,U
+561F 3D               (                      PUTSPR.ASM):00054         MUL
+5620 BE5D8D           (                      PUTSPR.ASM):00055         LDX     $5D8D
+5623 308B             (                      PUTSPR.ASM):00056         LEAX    D,X
+5625 E6C4             (                      PUTSPR.ASM):00057         LDB     ,U
+5627 54               (                      PUTSPR.ASM):00058         LSRB
+5628 54               (                      PUTSPR.ASM):00059         LSRB
+5629 3A               (                      PUTSPR.ASM):00060         ABX
+562A E643             (                      PUTSPR.ASM):00061         LDB     3,U     ; Vertical height - store it for a loop.
+562C F7563E           (                      PUTSPR.ASM):00062         STB     $563E
+562F 4F               (                      PUTSPR.ASM):00063         CLRA            ; Ready to blank
+5630 5F               (                      PUTSPR.ASM):00064         CLRB
+5631 ED81             (                      PUTSPR.ASM):00065 LOOPY   STD     ,X++    ; Clear bytes (try to maximize blank time)
+5633 A784             (                      PUTSPR.ASM):00066         STA     ,X
+5635 30881E           (                      PUTSPR.ASM):00067         LEAX    $1E,X
+5638 7A563E           (                      PUTSPR.ASM):00068         DEC     $563E
+563B 26F4             (                      PUTSPR.ASM):00069         BNE     LOOPY
+563D 39               (                      PUTSPR.ASM):00070         RTS             ; Return
+     563D             (                      PUTSPR.ASM):00071 LAST    EQU     .-1
+                      (                      PUTSPR.ASM):00072         END     PUTSPR
+
+Symbol Table:
+[ G] DELOP1                           5616
+[ G] ERSPOR                           560F
+[ G] ERSPR1                           561B
+[ G] LAST                             563D
+[ G] LOOP                             55F4
+[ G] LOOP1                            55FB
+[ G] LOOPY                            5631
+[ G] PTSPR1                           55BA
+[ G] PUTSPR                           55B5
