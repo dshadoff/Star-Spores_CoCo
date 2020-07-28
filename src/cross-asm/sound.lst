@@ -1,0 +1,42 @@
+                      (                       SOUND.ASM):00001         ORG     $5CC7
+5CC7 00               (                       SOUND.ASM):00002 SONXBT  FCB     0       ; Scratch variable
+5CC8 3416             (                       SOUND.ASM):00003 SOUND   PSHS    X,B,A   ; protect registers
+5CCA B6FF01           (                       SOUND.ASM):00004         LDA     $FF01   ; Setup PIA's to make sound
+5CCD 84F7             (                       SOUND.ASM):00005         ANDA    #$F7
+5CCF B7FF01           (                       SOUND.ASM):00006         STA     $FF01
+5CD2 B6FF03           (                       SOUND.ASM):00007         LDA     $FF03
+5CD5 84F7             (                       SOUND.ASM):00008         ANDA    #$F7
+5CD7 B7FF03           (                       SOUND.ASM):00009         STA     $FF03
+5CDA B6FF23           (                       SOUND.ASM):00010         LDA     $FF23
+5CDD 8A08             (                       SOUND.ASM):00011         ORA     #8
+5CDF B7FF23           (                       SOUND.ASM):00012         STA     $FF23
+5CE2 B65CC7           (                       SOUND.ASM):00013         LDA     SONXBT  ; Take whatever D-A was there,
+5CE5 C6C0             (                       SOUND.ASM):00014         LDB     #$C0    ; and produce a 'click' by
+5CE7 E7E2             (                       SOUND.ASM):00015         STB     ,-S     ; complementing the most- and
+5CE9 A8E0             (                       SOUND.ASM):00016         EORA    ,S+     ; second-most significant
+5CEB B75CC7           (                       SOUND.ASM):00017         STA     SONXBT  ; (loudest) bits
+5CEE B7FF20           (                       SOUND.ASM):00018         STA     $FF20
+5CF1 8E0001           (                       SOUND.ASM):00019         LDX     #1      ; Variable delay for variable
+     5CF2             (                       SOUND.ASM):00020 SONDX1  EQU     .-2     ; frequency
+5CF4 301F             (                       SOUND.ASM):00021 SONLP1  LEAX    -1,X
+5CF6 26FC             (                       SOUND.ASM):00022         BNE     SONLP1
+5CF8 E7E2             (                       SOUND.ASM):00023         STB     ,-S     ; Make another click (other
+5CFA A8E0             (                       SOUND.ASM):00024         EORA    ,S+     ; half-cycle)
+5CFC B75CC7           (                       SOUND.ASM):00025         STA     SONXBT
+5CFF B7FF20           (                       SOUND.ASM):00026         STA     $FF20
+5D02 8E0001           (                       SOUND.ASM):00027         LDX     #1      ; Other variable delay for
+     5D03             (                       SOUND.ASM):00028 SONDX2  EQU     .-2     ; variable frequency
+5D05 301F             (                       SOUND.ASM):00029 SONLP2  LEAX    -1,X
+5D07 26FC             (                       SOUND.ASM):00030         BNE     SONLP2
+5D09 3596             (                       SOUND.ASM):00031         PULS    A,B,X,PC        ; return with regs intact
+     5D0A             (                       SOUND.ASM):00032 LAST    EQU     .-1
+                      (                       SOUND.ASM):00033         END
+
+Symbol Table:
+[ G] LAST                             5D0A
+[ G] SONDX1                           5CF2
+[ G] SONDX2                           5D03
+[ G] SONLP1                           5CF4
+[ G] SONLP2                           5D05
+[ G] SONXBT                           5CC7
+[ G] SOUND                            5CC8
