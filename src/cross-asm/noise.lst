@@ -1,0 +1,73 @@
+                      (                       NOISE.ASM):00001         ORG     $5D0B
+5D0B BD5D21           (                       NOISE.ASM):00002 RNDSND  JSR     RNDOM   ; Get random number
+5D0E FC5D3F           (                       NOISE.ASM):00003         LDD     RNDNO
+5D11 54               (                       NOISE.ASM):00004         LSRB            ; Make it a shorter delay (higher
+5D12 54               (                       NOISE.ASM):00005         LSRB            ; pitch), minimum delay of 1
+5D13 4F               (                       NOISE.ASM):00006         CLRA
+5D14 5C               (                       NOISE.ASM):00007         INCB
+5D15 FD5D74           (                       NOISE.ASM):00008         STD     NOISE1
+5D18 FD5D85           (                       NOISE.ASM):00009         STD     NOISE2
+5D1B BD5D44           (                       NOISE.ASM):00010         JSR     NOISE   ; Do 2 cycles of this sound
+5D1E 7E5D44           (                       NOISE.ASM):00011         JMP     NOISE
+5D21 3416             (                       NOISE.ASM):00012 RNDOM   PSHS    X,B,A   ; Protect registers
+5D23 BE5D41           (                       NOISE.ASM):00013         LDX     RNDCNT  ; Get stuff ready
+5D26 FC5D3F           (                       NOISE.ASM):00014         LDD     RNDNO
+5D29 A885             (                       NOISE.ASM):00015         EORA    B,X     ; Do a clever operation with the ROM's
+5D2B E886             (                       NOISE.ASM):00016         EORB    A,X     ; data to generate a random number
+5D2D 3002             (                       NOISE.ASM):00017         LEAX    2,X     ; Make sure that the counter changes,
+5D2F 8CBF00           (                       NOISE.ASM):00018         CMPX    #$BF00  ; and stays within the ROMs
+5D32 2503             (                       NOISE.ASM):00019         BLO     NEXT
+5D34 8EA000           (                       NOISE.ASM):00020         LDX     #$A000
+5D37 BF5D41           (                       NOISE.ASM):00021 NEXT    STX     RNDCNT
+5D3A FD5D3F           (                       NOISE.ASM):00022         STD     RNDNO   ; Store number
+5D3D 3596             (                       NOISE.ASM):00023         PULS    A,B,X,PC        ; Return
+5D3F 0000             (                       NOISE.ASM):00024 RNDNO   FDB     0       ; scratch values
+5D41 A000             (                       NOISE.ASM):00025 RNDCNT  FDB     $A000   ; scratch values
+5D43 00               (                       NOISE.ASM):00026 NOISBT  FCB     0       ; scratch values
+5D44 3416             (                       NOISE.ASM):00027 NOISE   PSHS    X,B,A   ; Protect registers
+5D46 B6FF01           (                       NOISE.ASM):00028         LDA     $FF01   ; Set up PIA's for sound
+5D49 84F7             (                       NOISE.ASM):00029         ANDA    #$F7
+5D4B B7FF01           (                       NOISE.ASM):00030         STA     $FF01
+5D4E B6FF03           (                       NOISE.ASM):00031         LDA     $FF03
+5D51 84F7             (                       NOISE.ASM):00032         ANDA    #$F7
+5D53 B7FF03           (                       NOISE.ASM):00033         STA     $FF03
+5D56 B6FF23           (                       NOISE.ASM):00034         LDA     $FF23
+5D59 8A08             (                       NOISE.ASM):00035         ORA     #8
+5D5B B7FF23           (                       NOISE.ASM):00036         STA     $FF23
+5D5E B65D43           (                       NOISE.ASM):00037         LDA     NOISBT  ; Make click as in SOUND, but with
+5D61 BD5D21           (                       NOISE.ASM):00038         JSR     RNDOM   ; random volume (thus, noise)
+5D64 F65D3F           (                       NOISE.ASM):00039         LDB     RNDNO
+5D67 C4FC             (                       NOISE.ASM):00040         ANDB    #$FC
+5D69 E7E2             (                       NOISE.ASM):00041         STB     ,-S
+5D6B A8E0             (                       NOISE.ASM):00042         EORA    ,S+
+5D6D B75D43           (                       NOISE.ASM):00043         STA     NOISBT
+5D70 B7FF20           (                       NOISE.ASM):00044         STA     $FF20
+5D73 8E0001           (                       NOISE.ASM):00045         LDX     #1      ; Wait (variable)
+     5D74             (                       NOISE.ASM):00046 NOISE1  EQU     .-2
+5D76 301F             (                       NOISE.ASM):00047 NOSLP1  LEAX    -1,X
+5D78 26FC             (                       NOISE.ASM):00048         BNE     NOSLP1
+5D7A E7E2             (                       NOISE.ASM):00049         STB     ,-S     ; Make same click as above to
+5D7C A8E0             (                       NOISE.ASM):00050         EORA    ,S+     ; restore value (finish cycle)
+5D7E B75D43           (                       NOISE.ASM):00051         STA     NOISBT
+5D81 B7FF20           (                       NOISE.ASM):00052         STA     $FF20
+5D84 8E0001           (                       NOISE.ASM):00053         LDX     #1
+     5D85             (                       NOISE.ASM):00054 NOISE2  EQU     .-2     ; Wait (variable)
+5D87 301F             (                       NOISE.ASM):00055 NOSLP2  LEAX    -1,X
+5D89 26FC             (                       NOISE.ASM):00056         BNE     NOSLP2
+5D8B 3596             (                       NOISE.ASM):00057         PULS    A,B,X,PC        ; Return
+     5D8C             (                       NOISE.ASM):00058 LAST    EQU     .-1
+                      (                       NOISE.ASM):00059         END
+
+Symbol Table:
+[ G] LAST                             5D8C
+[ G] NEXT                             5D37
+[ G] NOISBT                           5D43
+[ G] NOISE                            5D44
+[ G] NOISE1                           5D74
+[ G] NOISE2                           5D85
+[ G] NOSLP1                           5D76
+[ G] NOSLP2                           5D87
+[ G] RNDCNT                           5D41
+[ G] RNDNO                            5D3F
+[ G] RNDOM                            5D21
+[ G] RNDSND                           5D0B
