@@ -1,0 +1,958 @@
+                      (                       DATA1.ASM):00001         ORG     $526D
+526D 55               (                       DATA1.ASM):00002 D526DH  FCB     $55     ; Graphic-encoded message:
+526E 41               (                       DATA1.ASM):00003         FCB     $41     ; "500 Extra"
+526F 50               (                       DATA1.ASM):00004         FCB     $50
+5270 15               (                       DATA1.ASM):00005 D5270H  FCB     $15
+5271 00               (                       DATA1.ASM):00006         FCB     $00
+5272 15               (                       DATA1.ASM):00007         FCB     $15
+5273 50               (                       DATA1.ASM):00008         FCB     $50
+5274 00               (                       DATA1.ASM):00009         FCB     $00
+5275 04               (                       DATA1.ASM):00010         FCB     $04
+5276 00               (                       DATA1.ASM):00011         FCB     $00
+5277 00               (                       DATA1.ASM):00012         FCB     $00
+5278 00               (                       DATA1.ASM):00013 D5278H  FCB     $00
+5279 00               (                       DATA1.ASM):00014         FCB     $00
+527A 40               (                       DATA1.ASM):00015         FCB     $40
+527B 04               (                       DATA1.ASM):00016         FCB     $04
+527C 04               (                       DATA1.ASM):00017         FCB     $04
+527D 40               (                       DATA1.ASM):00018         FCB     $40
+527E 40               (                       DATA1.ASM):00019         FCB     $40
+527F 10               (                       DATA1.ASM):00020         FCB     $10
+5280 00               (                       DATA1.ASM):00021 D5280H  FCB     $00
+5281 00               (                       DATA1.ASM):00022         FCB     $00
+5282 04               (                       DATA1.ASM):00023         FCB     $04
+5283 00               (                       DATA1.ASM):00024         FCB     $00
+5284 00               (                       DATA1.ASM):00025         FCB     $00
+5285 00               (                       DATA1.ASM):00026         FCB     $00
+5286 00               (                       DATA1.ASM):00027         FCB     $00
+5287 55               (                       DATA1.ASM):00028         FCB     $55
+5288 04               (                       DATA1.ASM):00029 D5288H  FCB     $04
+5289 14               (                       DATA1.ASM):00030         FCB     $14
+528A 41               (                       DATA1.ASM):00031         FCB     $41
+528B 40               (                       DATA1.ASM):00032         FCB     $40
+528C 10               (                       DATA1.ASM):00033         FCB     $10
+528D 01               (                       DATA1.ASM):00034         FCB     $01
+528E 01               (                       DATA1.ASM):00035         FCB     $01
+528F 15               (                       DATA1.ASM):00036         FCB     $15
+5290 01               (                       DATA1.ASM):00037 D5290H  FCB     $01
+5291 14               (                       DATA1.ASM):00038         FCB     $14
+5292 15               (                       DATA1.ASM):00039         FCB     $15
+5293 00               (                       DATA1.ASM):00040         FCB     $00
+5294 00               (                       DATA1.ASM):00041         FCB     $00
+5295 44               (                       DATA1.ASM):00042         FCB     $44
+5296 44               (                       DATA1.ASM):00043         FCB     $44
+5297 44               (                       DATA1.ASM):00044         FCB     $44
+5298 40               (                       DATA1.ASM):00045 D5298H  FCB     $40
+5299 15               (                       DATA1.ASM):00046         FCB     $15
+529A 40               (                       DATA1.ASM):00047         FCB     $40
+529B 44               (                       DATA1.ASM):00048         FCB     $44
+529C 04               (                       DATA1.ASM):00049         FCB     $04
+529D 01               (                       DATA1.ASM):00050         FCB     $01
+529E 41               (                       DATA1.ASM):00051         FCB     $41
+529F 00               (                       DATA1.ASM):00052         FCB     $00
+52A0 40               (                       DATA1.ASM):00053 D52A0H  FCB     $40
+52A1 00               (                       DATA1.ASM):00054         FCB     $00
+52A2 45               (                       DATA1.ASM):00055         FCB     $45
+52A3 04               (                       DATA1.ASM):00056         FCB     $04
+52A4 50               (                       DATA1.ASM):00057         FCB     $50
+52A5 40               (                       DATA1.ASM):00058         FCB     $40
+52A6 10               (                       DATA1.ASM):00059         FCB     $10
+52A7 00               (                       DATA1.ASM):00060         FCB     $00
+52A8 10               (                       DATA1.ASM):00061 D52A8H  FCB     $10
+52A9 04               (                       DATA1.ASM):00062         FCB     $04
+52AA 01               (                       DATA1.ASM):00063         FCB     $01
+52AB 00               (                       DATA1.ASM):00064         FCB     $00
+52AC 05               (                       DATA1.ASM):00065         FCB     $05
+52AD 40               (                       DATA1.ASM):00066         FCB     $40
+52AE 40               (                       DATA1.ASM):00067         FCB     $40
+52AF 44               (                       DATA1.ASM):00068         FCB     $44
+52B0 04               (                       DATA1.ASM):00069 D52B0H  FCB     $04
+52B1 40               (                       DATA1.ASM):00070         FCB     $40
+52B2 40               (                       DATA1.ASM):00071         FCB     $40
+52B3 10               (                       DATA1.ASM):00072         FCB     $10
+52B4 00               (                       DATA1.ASM):00073         FCB     $00
+52B5 44               (                       DATA1.ASM):00074         FCB     $44
+52B6 04               (                       DATA1.ASM):00075         FCB     $04
+52B7 11               (                       DATA1.ASM):00076         FCB     $11
+52B8 00               (                       DATA1.ASM):00077 D52B8H  FCB     $00
+52B9 10               (                       DATA1.ASM):00078         FCB     $10
+52BA 40               (                       DATA1.ASM):00079         FCB     $40
+52BB 15               (                       DATA1.ASM):00080         FCB     $15
+52BC 01               (                       DATA1.ASM):00081         FCB     $01
+52BD 50               (                       DATA1.ASM):00082         FCB     $50
+52BE 15               (                       DATA1.ASM):00083         FCB     $15
+52BF 00               (                       DATA1.ASM):00084         FCB     $00
+52C0 15               (                       DATA1.ASM):00085 D52C0H  FCB     $15
+52C1 41               (                       DATA1.ASM):00086         FCB     $41
+52C2 01               (                       DATA1.ASM):00087         FCB     $01
+52C3 01               (                       DATA1.ASM):00088         FCB     $01
+52C4 41               (                       DATA1.ASM):00089         FCB     $41
+52C5 00               (                       DATA1.ASM):00090         FCB     $00
+52C6 05               (                       DATA1.ASM):00091         FCB     $05
+52C7 10               (                       DATA1.ASM):00092         FCB     $10
+                      (                       DATA1.ASM):00093 
+52C8 00               (                       DATA1.ASM):00094 D52C8H  FCB     $00     ; scratch memory
+52C9 00               (                       DATA1.ASM):00095         FCB     $00     ; bonus round number
+                      (                       DATA1.ASM):00096 
+52CA 01               (                       DATA1.ASM):00097         FCB     $01     ; graphic-encoded "Round" message
+52CB 54               (                       DATA1.ASM):00098         FCB     $54
+52CC 00               (                       DATA1.ASM):00099         FCB     $00
+52CD 00               (                       DATA1.ASM):00100         FCB     $00
+52CE 00               (                       DATA1.ASM):00101         FCB     $00
+52CF 00               (                       DATA1.ASM):00102         FCB     $00
+52D0 00               (                       DATA1.ASM):00103 D52D0H  FCB     $00
+52D1 01               (                       DATA1.ASM):00104         FCB     $01
+52D2 01               (                       DATA1.ASM):00105         FCB     $01
+52D3 01               (                       DATA1.ASM):00106         FCB     $01
+52D4 00               (                       DATA1.ASM):00107         FCB     $00
+52D5 00               (                       DATA1.ASM):00108         FCB     $00
+52D6 00               (                       DATA1.ASM):00109         FCB     $00
+52D7 00               (                       DATA1.ASM):00110         FCB     $00
+52D8 00               (                       DATA1.ASM):00111 D52D8H  FCB     $00
+52D9 01               (                       DATA1.ASM):00112         FCB     $01
+52DA 01               (                       DATA1.ASM):00113         FCB     $01
+52DB 01               (                       DATA1.ASM):00114         FCB     $01
+52DC 05               (                       DATA1.ASM):00115         FCB     $05
+52DD 41               (                       DATA1.ASM):00116         FCB     $41
+52DE 01               (                       DATA1.ASM):00117         FCB     $01
+52DF 11               (                       DATA1.ASM):00118         FCB     $11
+52E0 40               (                       DATA1.ASM):00119 D52E0H  FCB     $40
+52E1 51               (                       DATA1.ASM):00120         FCB     $51
+52E2 01               (                       DATA1.ASM):00121         FCB     $01
+52E3 54               (                       DATA1.ASM):00122         FCB     $54
+52E4 10               (                       DATA1.ASM):00123         FCB     $10
+52E5 11               (                       DATA1.ASM):00124         FCB     $11
+52E6 01               (                       DATA1.ASM):00125         FCB     $01
+52E7 14               (                       DATA1.ASM):00126         FCB     $14
+52E8 11               (                       DATA1.ASM):00127 D52E8H  FCB     $11
+52E9 05               (                       DATA1.ASM):00128         FCB     $05
+52EA 01               (                       DATA1.ASM):00129         FCB     $01
+52EB 10               (                       DATA1.ASM):00130         FCB     $10
+52EC 10               (                       DATA1.ASM):00131         FCB     $10
+52ED 11               (                       DATA1.ASM):00132         FCB     $11
+52EE 01               (                       DATA1.ASM):00133         FCB     $01
+52EF 10               (                       DATA1.ASM):00134         FCB     $10
+52F0 11               (                       DATA1.ASM):00135 D52F0H  FCB     $11
+52F1 01               (                       DATA1.ASM):00136         FCB     $01
+52F2 01               (                       DATA1.ASM):00137         FCB     $01
+52F3 04               (                       DATA1.ASM):00138         FCB     $04
+52F4 10               (                       DATA1.ASM):00139         FCB     $10
+52F5 11               (                       DATA1.ASM):00140         FCB     $11
+52F6 05               (                       DATA1.ASM):00141         FCB     $05
+52F7 10               (                       DATA1.ASM):00142         FCB     $10
+52F8 11               (                       DATA1.ASM):00143 D52F8H  FCB     $11
+52F9 05               (                       DATA1.ASM):00144         FCB     $05
+52FA 01               (                       DATA1.ASM):00145         FCB     $01
+52FB 01               (                       DATA1.ASM):00146         FCB     $01
+52FC 05               (                       DATA1.ASM):00147         FCB     $05
+52FD 40               (                       DATA1.ASM):00148         FCB     $40
+52FE 51               (                       DATA1.ASM):00149         FCB     $51
+52FF 10               (                       DATA1.ASM):00150         FCB     $10
+5300 10               (                       DATA1.ASM):00151 D5300H  FCB     $10
+5301 51               (                       DATA1.ASM):00152         FCB     $51
+                      (                       DATA1.ASM):00153 
+5302 55               (                       DATA1.ASM):00154         FCB     $55     ; Graphic-encoded "Bonus" message
+5303 00               (                       DATA1.ASM):00155         FCB     $00
+5304 00               (                       DATA1.ASM):00156         FCB     $00
+5305 00               (                       DATA1.ASM):00157         FCB     $00
+5306 00               (                       DATA1.ASM):00158         FCB     $00
+5307 00               (                       DATA1.ASM):00159         FCB     $00
+5308 00               (                       DATA1.ASM):00160 D5308H  FCB     $00
+5309 00               (                       DATA1.ASM):00161         FCB     $00
+530A 40               (                       DATA1.ASM):00162         FCB     $40
+530B 40               (                       DATA1.ASM):00163         FCB     $40
+530C 00               (                       DATA1.ASM):00164         FCB     $00
+530D 00               (                       DATA1.ASM):00165         FCB     $00
+530E 00               (                       DATA1.ASM):00166         FCB     $00
+530F 00               (                       DATA1.ASM):00167         FCB     $00
+5310 00               (                       DATA1.ASM):00168 D5310H  FCB     $00
+5311 00               (                       DATA1.ASM):00169         FCB     $00
+5312 40               (                       DATA1.ASM):00170         FCB     $40
+5313 41               (                       DATA1.ASM):00171         FCB     $41
+5314 50               (                       DATA1.ASM):00172         FCB     $50
+5315 45               (                       DATA1.ASM):00173         FCB     $45
+5316 04               (                       DATA1.ASM):00174         FCB     $04
+5317 04               (                       DATA1.ASM):00175         FCB     $04
+5318 15               (                       DATA1.ASM):00176 D5318H  FCB     $15
+5319 40               (                       DATA1.ASM):00177         FCB     $40
+531A 55               (                       DATA1.ASM):00178         FCB     $55
+531B 04               (                       DATA1.ASM):00179         FCB     $04
+531C 04               (                       DATA1.ASM):00180         FCB     $04
+531D 50               (                       DATA1.ASM):00181         FCB     $50
+531E 44               (                       DATA1.ASM):00182         FCB     $44
+531F 04               (                       DATA1.ASM):00183         FCB     $04
+5320 40               (                       DATA1.ASM):00184 D5320H  FCB     $40
+5321 00               (                       DATA1.ASM):00185         FCB     $00
+5322 40               (                       DATA1.ASM):00186         FCB     $40
+5323 44               (                       DATA1.ASM):00187         FCB     $44
+5324 04               (                       DATA1.ASM):00188         FCB     $04
+5325 40               (                       DATA1.ASM):00189         FCB     $40
+5326 44               (                       DATA1.ASM):00190         FCB     $44
+5327 04               (                       DATA1.ASM):00191         FCB     $04
+5328 15               (                       DATA1.ASM):00192 D5328H  FCB     $15
+5329 00               (                       DATA1.ASM):00193         FCB     $00
+532A 40               (                       DATA1.ASM):00194         FCB     $40
+532B 44               (                       DATA1.ASM):00195         FCB     $44
+532C 04               (                       DATA1.ASM):00196         FCB     $04
+532D 40               (                       DATA1.ASM):00197         FCB     $40
+532E 44               (                       DATA1.ASM):00198         FCB     $44
+532F 14               (                       DATA1.ASM):00199         FCB     $14
+5330 00               (                       DATA1.ASM):00200 D5330H  FCB     $00
+5331 40               (                       DATA1.ASM):00201         FCB     $40
+5332 55               (                       DATA1.ASM):00202         FCB     $55
+5333 01               (                       DATA1.ASM):00203         FCB     $01
+5334 50               (                       DATA1.ASM):00204         FCB     $50
+5335 40               (                       DATA1.ASM):00205         FCB     $40
+5336 41               (                       DATA1.ASM):00206         FCB     $41
+5337 44               (                       DATA1.ASM):00207         FCB     $44
+5338 55               (                       DATA1.ASM):00208 D5338H  FCB     $55
+5339 00               (                       DATA1.ASM):00209         FCB     $00
+                      (                       DATA1.ASM):00210 
+533A 01               (                       DATA1.ASM):00211         FCB     $01     ; Graphic "3" (5x7)
+533B 50               (                       DATA1.ASM):00212         FCB     $50
+533C 04               (                       DATA1.ASM):00213         FCB     $04
+533D 04               (                       DATA1.ASM):00214         FCB     $04
+533E 00               (                       DATA1.ASM):00215         FCB     $00
+533F 04               (                       DATA1.ASM):00216         FCB     $04
+5340 00               (                       DATA1.ASM):00217 D5340H  FCB     $00
+5341 50               (                       DATA1.ASM):00218         FCB     $50
+5342 00               (                       DATA1.ASM):00219         FCB     $00
+5343 04               (                       DATA1.ASM):00220         FCB     $04
+5344 04               (                       DATA1.ASM):00221         FCB     $04
+5345 04               (                       DATA1.ASM):00222         FCB     $04
+5346 01               (                       DATA1.ASM):00223         FCB     $01
+5347 50               (                       DATA1.ASM):00224         FCB     $50
+                      (                       DATA1.ASM):00225 
+5348 00               (                       DATA1.ASM):00226 D5348H  FCB     $00     ; Graphic "4" (5x7)
+5349 10               (                       DATA1.ASM):00227         FCB     $10
+534A 00               (                       DATA1.ASM):00228         FCB     $00
+534B 50               (                       DATA1.ASM):00229         FCB     $50
+534C 01               (                       DATA1.ASM):00230         FCB     $01
+534D 10               (                       DATA1.ASM):00231         FCB     $10
+534E 04               (                       DATA1.ASM):00232         FCB     $04
+534F 10               (                       DATA1.ASM):00233         FCB     $10
+5350 05               (                       DATA1.ASM):00234 D5350H  FCB     $05
+5351 54               (                       DATA1.ASM):00235         FCB     $54
+5352 00               (                       DATA1.ASM):00236         FCB     $00
+5353 10               (                       DATA1.ASM):00237         FCB     $10
+5354 00               (                       DATA1.ASM):00238         FCB     $00
+5355 10               (                       DATA1.ASM):00239         FCB     $10
+                      (                       DATA1.ASM):00240 
+5356 53               (                       DATA1.ASM):00241         FCB     $53     ; Special bonus round
+5357 5A               (                       DATA1.ASM):00242         FCB     $5A     ; pod position tables
+5358 53               (                       DATA1.ASM):00243 D5358H  FCB     $53
+5359 7A               (                       DATA1.ASM):00244         FCB     $7A
+535A 3C               (                       DATA1.ASM):00245         FCB     $3C
+535B 0F               (                       DATA1.ASM):00246         FCB     $0F
+535C 5B               (                       DATA1.ASM):00247         FCB     $5B
+535D DC               (                       DATA1.ASM):00248         FCB     $DC
+535E 3C               (                       DATA1.ASM):00249         FCB     $3C
+535F 1D               (                       DATA1.ASM):00250         FCB     $1D
+5360 5B               (                       DATA1.ASM):00251 D5360H  FCB     $5B
+5361 EB               (                       DATA1.ASM):00252         FCB     $EB
+5362 1C               (                       DATA1.ASM):00253         FCB     $1C
+5363 33               (                       DATA1.ASM):00254         FCB     $33
+5364 5C               (                       DATA1.ASM):00255         FCB     $5C
+5365 79               (                       DATA1.ASM):00256         FCB     $79
+5366 14               (                       DATA1.ASM):00257         FCB     $14
+5367 23               (                       DATA1.ASM):00258         FCB     $23
+5368 5C               (                       DATA1.ASM):00259 D5368H  FCB     $5C
+5369 71               (                       DATA1.ASM):00260         FCB     $71
+536A 24               (                       DATA1.ASM):00261         FCB     $24
+536B 23               (                       DATA1.ASM):00262         FCB     $23
+536C 5C               (                       DATA1.ASM):00263         FCB     $5C
+536D 81               (                       DATA1.ASM):00264         FCB     $81
+536E 5C               (                       DATA1.ASM):00265         FCB     $5C
+536F 33               (                       DATA1.ASM):00266         FCB     $33
+5370 5C               (                       DATA1.ASM):00267 D5370H  FCB     $5C
+5371 79               (                       DATA1.ASM):00268         FCB     $79
+5372 54               (                       DATA1.ASM):00269         FCB     $54
+5373 23               (                       DATA1.ASM):00270         FCB     $23
+5374 5C               (                       DATA1.ASM):00271         FCB     $5C
+5375 71               (                       DATA1.ASM):00272         FCB     $71
+5376 64               (                       DATA1.ASM):00273         FCB     $64
+5377 23               (                       DATA1.ASM):00274         FCB     $23
+5378 5C               (                       DATA1.ASM):00275 D5378H  FCB     $5C
+5379 81               (                       DATA1.ASM):00276         FCB     $81
+537A 2F               (                       DATA1.ASM):00277         FCB     $2F
+537B 0F               (                       DATA1.ASM):00278         FCB     $0F
+537C 5B               (                       DATA1.ASM):00279         FCB     $5B
+537D DC               (                       DATA1.ASM):00280         FCB     $DC
+537E 2F               (                       DATA1.ASM):00281         FCB     $2F
+537F 1D               (                       DATA1.ASM):00282         FCB     $1D
+5380 5B               (                       DATA1.ASM):00283 D5380H  FCB     $5B
+5381 EB               (                       DATA1.ASM):00284         FCB     $EB
+5382 49               (                       DATA1.ASM):00285         FCB     $49
+5383 0F               (                       DATA1.ASM):00286         FCB     $0F
+5384 5B               (                       DATA1.ASM):00287         FCB     $5B
+5385 DC               (                       DATA1.ASM):00288         FCB     $DC
+5386 49               (                       DATA1.ASM):00289         FCB     $49
+5387 1D               (                       DATA1.ASM):00290         FCB     $1D
+5388 5B               (                       DATA1.ASM):00291 D5388H  FCB     $5B
+5389 EB               (                       DATA1.ASM):00292         FCB     $EB
+538A 16               (                       DATA1.ASM):00293         FCB     $16
+538B 21               (                       DATA1.ASM):00294         FCB     $21
+538C 5B               (                       DATA1.ASM):00295         FCB     $5B
+538D FB               (                       DATA1.ASM):00296         FCB     $FB
+538E 16               (                       DATA1.ASM):00297         FCB     $16
+538F 21               (                       DATA1.ASM):00298         FCB     $21
+5390 5C               (                       DATA1.ASM):00299 D5390H  FCB     $5C
+5391 19               (                       DATA1.ASM):00300         FCB     $19
+5392 62               (                       DATA1.ASM):00301         FCB     $62
+5393 21               (                       DATA1.ASM):00302         FCB     $21
+5394 5B               (                       DATA1.ASM):00303         FCB     $5B
+5395 FB               (                       DATA1.ASM):00304         FCB     $FB
+5396 62               (                       DATA1.ASM):00305         FCB     $62
+5397 21               (                       DATA1.ASM):00306         FCB     $21
+5398 5C               (                       DATA1.ASM):00307 D5398H  FCB     $5C
+5399 19               (                       DATA1.ASM):00308         FCB     $19
+                      (                       DATA1.ASM):00309 
+539A 02               (                       DATA1.ASM):00310         FCB     $02     ; Complexity tables for
+539B 1F               (                       DATA1.ASM):00311         FCB     $1F     ; better players.
+539C 03               (                       DATA1.ASM):00312         FCB     $03
+539D 1F               (                       DATA1.ASM):00313         FCB     $1F     ; Depending on current score,
+539E 02               (                       DATA1.ASM):00314         FCB     $02     ; these define a number of
+539F 0F               (                       DATA1.ASM):00315         FCB     $0F     ; changeable items such as
+53A0 03               (                       DATA1.ASM):00316 D53A0H  FCB     $03     ; speed of game for difficulty
+53A1 0F               (                       DATA1.ASM):00317         FCB     $0F     ; levels
+53A2 04               (                       DATA1.ASM):00318         FCB     $04
+53A3 0F               (                       DATA1.ASM):00319         FCB     $0F
+53A4 05               (                       DATA1.ASM):00320         FCB     $05
+53A5 0F               (                       DATA1.ASM):00321         FCB     $0F
+53A6 03               (                       DATA1.ASM):00322         FCB     $03
+53A7 07               (                       DATA1.ASM):00323         FCB     $07
+53A8 04               (                       DATA1.ASM):00324 D53A8H  FCB     $04
+53A9 07               (                       DATA1.ASM):00325         FCB     $07
+53AA 05               (                       DATA1.ASM):00326         FCB     $05
+53AB 07               (                       DATA1.ASM):00327         FCB     $07
+53AC 06               (                       DATA1.ASM):00328         FCB     $06
+53AD 07               (                       DATA1.ASM):00329         FCB     $07
+53AE 07               (                       DATA1.ASM):00330         FCB     $07
+53AF 07               (                       DATA1.ASM):00331         FCB     $07
+53B0 04               (                       DATA1.ASM):00332 D53B0H  FCB     $04
+53B1 03               (                       DATA1.ASM):00333         FCB     $03
+53B2 05               (                       DATA1.ASM):00334         FCB     $05
+53B3 03               (                       DATA1.ASM):00335         FCB     $03
+53B4 06               (                       DATA1.ASM):00336         FCB     $06
+53B5 03               (                       DATA1.ASM):00337         FCB     $03
+53B6 07               (                       DATA1.ASM):00338         FCB     $07
+53B7 03               (                       DATA1.ASM):00339         FCB     $03
+53B8 05               (                       DATA1.ASM):00340 D53B8H  FCB     $05
+53B9 01               (                       DATA1.ASM):00341         FCB     $01
+53BA 06               (                       DATA1.ASM):00342         FCB     $06
+53BB 01               (                       DATA1.ASM):00343         FCB     $01
+53BC 07               (                       DATA1.ASM):00344         FCB     $07
+53BD 01               (                       DATA1.ASM):00345         FCB     $01
+53BE 08               (                       DATA1.ASM):00346         FCB     $08
+53BF 01               (                       DATA1.ASM):00347         FCB     $01
+53C0 08               (                       DATA1.ASM):00348 D53C0H  FCB     $08
+53C1 00               (                       DATA1.ASM):00349         FCB     $00
+53C2 08               (                       DATA1.ASM):00350         FCB     $08
+53C3 00               (                       DATA1.ASM):00351         FCB     $00
+53C4 03               (                       DATA1.ASM):00352         FCB     $03
+53C5 1F               (                       DATA1.ASM):00353         FCB     $1F
+53C6 02               (                       DATA1.ASM):00354         FCB     $02
+53C7 0F               (                       DATA1.ASM):00355         FCB     $0F
+53C8 03               (                       DATA1.ASM):00356 D53C8H  FCB     $03
+53C9 0F               (                       DATA1.ASM):00357         FCB     $0F
+53CA 04               (                       DATA1.ASM):00358         FCB     $04
+53CB 0F               (                       DATA1.ASM):00359         FCB     $0F
+53CC 05               (                       DATA1.ASM):00360         FCB     $05
+53CD 0F               (                       DATA1.ASM):00361         FCB     $0F
+53CE 03               (                       DATA1.ASM):00362         FCB     $03
+53CF 07               (                       DATA1.ASM):00363         FCB     $07
+53D0 04               (                       DATA1.ASM):00364 D53D0H  FCB     $04
+53D1 07               (                       DATA1.ASM):00365         FCB     $07
+53D2 05               (                       DATA1.ASM):00366         FCB     $05
+53D3 07               (                       DATA1.ASM):00367         FCB     $07
+53D4 06               (                       DATA1.ASM):00368         FCB     $06
+53D5 07               (                       DATA1.ASM):00369         FCB     $07
+53D6 07               (                       DATA1.ASM):00370         FCB     $07
+53D7 07               (                       DATA1.ASM):00371         FCB     $07
+53D8 04               (                       DATA1.ASM):00372 D53D8H  FCB     $04
+53D9 03               (                       DATA1.ASM):00373         FCB     $03
+53DA 05               (                       DATA1.ASM):00374         FCB     $05
+53DB 03               (                       DATA1.ASM):00375         FCB     $03
+53DC 06               (                       DATA1.ASM):00376         FCB     $06
+53DD 03               (                       DATA1.ASM):00377         FCB     $03
+53DE 07               (                       DATA1.ASM):00378         FCB     $07
+53DF 03               (                       DATA1.ASM):00379         FCB     $03
+53E0 05               (                       DATA1.ASM):00380 D53E0H  FCB     $05
+53E1 01               (                       DATA1.ASM):00381         FCB     $01
+53E2 06               (                       DATA1.ASM):00382         FCB     $06
+53E3 01               (                       DATA1.ASM):00383         FCB     $01
+53E4 07               (                       DATA1.ASM):00384         FCB     $07
+53E5 01               (                       DATA1.ASM):00385         FCB     $01
+53E6 08               (                       DATA1.ASM):00386         FCB     $08
+53E7 01               (                       DATA1.ASM):00387         FCB     $01
+53E8 08               (                       DATA1.ASM):00388 D53E8H  FCB     $08
+53E9 00               (                       DATA1.ASM):00389         FCB     $00
+53EA 08               (                       DATA1.ASM):00390         FCB     $08
+53EB 00               (                       DATA1.ASM):00391         FCB     $00
+53EC 08               (                       DATA1.ASM):00392         FCB     $08
+53ED 00               (                       DATA1.ASM):00393         FCB     $00
+53EE 01               (                       DATA1.ASM):00394         FCB     $01
+53EF 1F               (                       DATA1.ASM):00395         FCB     $1F
+53F0 02               (                       DATA1.ASM):00396 D53F0H  FCB     $02
+53F1 1F               (                       DATA1.ASM):00397         FCB     $1F
+53F2 03               (                       DATA1.ASM):00398         FCB     $03
+53F3 1F               (                       DATA1.ASM):00399         FCB     $1F
+53F4 02               (                       DATA1.ASM):00400         FCB     $02
+53F5 0F               (                       DATA1.ASM):00401         FCB     $0F
+53F6 03               (                       DATA1.ASM):00402         FCB     $03
+53F7 0F               (                       DATA1.ASM):00403         FCB     $0F
+53F8 04               (                       DATA1.ASM):00404 D53F8H  FCB     $04
+53F9 0F               (                       DATA1.ASM):00405         FCB     $0F
+53FA 05               (                       DATA1.ASM):00406         FCB     $05
+53FB 0F               (                       DATA1.ASM):00407         FCB     $0F
+53FC 03               (                       DATA1.ASM):00408         FCB     $03
+53FD 07               (                       DATA1.ASM):00409         FCB     $07
+53FE 04               (                       DATA1.ASM):00410         FCB     $04
+53FF 07               (                       DATA1.ASM):00411         FCB     $07
+5400 05               (                       DATA1.ASM):00412 D5400H  FCB     $05
+5401 07               (                       DATA1.ASM):00413         FCB     $07
+5402 06               (                       DATA1.ASM):00414         FCB     $06
+5403 07               (                       DATA1.ASM):00415         FCB     $07
+5404 07               (                       DATA1.ASM):00416         FCB     $07
+5405 07               (                       DATA1.ASM):00417         FCB     $07
+5406 04               (                       DATA1.ASM):00418         FCB     $04
+5407 03               (                       DATA1.ASM):00419         FCB     $03
+5408 05               (                       DATA1.ASM):00420 D5408H  FCB     $05
+5409 03               (                       DATA1.ASM):00421         FCB     $03
+540A 06               (                       DATA1.ASM):00422         FCB     $06
+540B 03               (                       DATA1.ASM):00423         FCB     $03
+540C 07               (                       DATA1.ASM):00424         FCB     $07
+540D 03               (                       DATA1.ASM):00425         FCB     $03
+540E 05               (                       DATA1.ASM):00426         FCB     $05
+540F 01               (                       DATA1.ASM):00427         FCB     $01
+5410 06               (                       DATA1.ASM):00428 D5410H  FCB     $06
+5411 01               (                       DATA1.ASM):00429         FCB     $01
+5412 07               (                       DATA1.ASM):00430         FCB     $07
+5413 01               (                       DATA1.ASM):00431         FCB     $01
+5414 08               (                       DATA1.ASM):00432         FCB     $08
+5415 01               (                       DATA1.ASM):00433         FCB     $01
+5416 08               (                       DATA1.ASM):00434         FCB     $08
+5417 00               (                       DATA1.ASM):00435         FCB     $00
+5418 03               (                       DATA1.ASM):00436 D5418H  FCB     $03
+5419 1F               (                       DATA1.ASM):00437         FCB     $1F
+541A 02               (                       DATA1.ASM):00438         FCB     $02
+541B 0F               (                       DATA1.ASM):00439         FCB     $0F
+541C 03               (                       DATA1.ASM):00440         FCB     $03
+541D 0F               (                       DATA1.ASM):00441         FCB     $0F
+541E 04               (                       DATA1.ASM):00442         FCB     $04
+541F 0F               (                       DATA1.ASM):00443         FCB     $0F
+5420 05               (                       DATA1.ASM):00444 D5420H  FCB     $05
+5421 0F               (                       DATA1.ASM):00445         FCB     $0F
+5422 03               (                       DATA1.ASM):00446         FCB     $03
+5423 07               (                       DATA1.ASM):00447         FCB     $07
+5424 04               (                       DATA1.ASM):00448         FCB     $04
+5425 07               (                       DATA1.ASM):00449         FCB     $07
+5426 05               (                       DATA1.ASM):00450         FCB     $05
+5427 07               (                       DATA1.ASM):00451         FCB     $07
+5428 06               (                       DATA1.ASM):00452 D5428H  FCB     $06
+5429 07               (                       DATA1.ASM):00453         FCB     $07
+542A 07               (                       DATA1.ASM):00454         FCB     $07
+542B 07               (                       DATA1.ASM):00455         FCB     $07
+542C 04               (                       DATA1.ASM):00456         FCB     $04
+542D 03               (                       DATA1.ASM):00457         FCB     $03
+542E 05               (                       DATA1.ASM):00458         FCB     $05
+542F 03               (                       DATA1.ASM):00459         FCB     $03
+5430 06               (                       DATA1.ASM):00460 D5430H  FCB     $06
+5431 03               (                       DATA1.ASM):00461         FCB     $03
+5432 07               (                       DATA1.ASM):00462         FCB     $07
+5433 03               (                       DATA1.ASM):00463         FCB     $03
+5434 05               (                       DATA1.ASM):00464         FCB     $05
+5435 01               (                       DATA1.ASM):00465         FCB     $01
+5436 06               (                       DATA1.ASM):00466         FCB     $06
+5437 01               (                       DATA1.ASM):00467         FCB     $01
+5438 07               (                       DATA1.ASM):00468 D5438H  FCB     $07
+5439 01               (                       DATA1.ASM):00469         FCB     $01
+543A 08               (                       DATA1.ASM):00470         FCB     $08
+543B 01               (                       DATA1.ASM):00471         FCB     $01
+543C 08               (                       DATA1.ASM):00472         FCB     $08
+543D 00               (                       DATA1.ASM):00473         FCB     $00
+543E 08               (                       DATA1.ASM):00474         FCB     $08
+543F 00               (                       DATA1.ASM):00475         FCB     $00
+5440 08               (                       DATA1.ASM):00476 D5440H  FCB     $08
+5441 00               (                       DATA1.ASM):00477         FCB     $00
+5442 01               (                       DATA1.ASM):00478         FCB     $01
+5443 1F               (                       DATA1.ASM):00479         FCB     $1F
+5444 02               (                       DATA1.ASM):00480         FCB     $02
+5445 1F               (                       DATA1.ASM):00481         FCB     $1F
+5446 03               (                       DATA1.ASM):00482         FCB     $03
+5447 1F               (                       DATA1.ASM):00483         FCB     $1F
+5448 02               (                       DATA1.ASM):00484 D5448H  FCB     $02
+5449 0F               (                       DATA1.ASM):00485         FCB     $0F
+544A 03               (                       DATA1.ASM):00486         FCB     $03
+544B 0F               (                       DATA1.ASM):00487         FCB     $0F
+544C 02               (                       DATA1.ASM):00488         FCB     $02
+544D 07               (                       DATA1.ASM):00489         FCB     $07
+544E 03               (                       DATA1.ASM):00490         FCB     $03
+544F 07               (                       DATA1.ASM):00491         FCB     $07
+5450 04               (                       DATA1.ASM):00492 D5450H  FCB     $04
+5451 07               (                       DATA1.ASM):00493         FCB     $07
+5452 02               (                       DATA1.ASM):00494         FCB     $02
+5453 03               (                       DATA1.ASM):00495         FCB     $03
+5454 03               (                       DATA1.ASM):00496         FCB     $03
+5455 03               (                       DATA1.ASM):00497         FCB     $03
+5456 04               (                       DATA1.ASM):00498         FCB     $04
+5457 03               (                       DATA1.ASM):00499         FCB     $03
+5458 03               (                       DATA1.ASM):00500 D5458H  FCB     $03
+5459 01               (                       DATA1.ASM):00501         FCB     $01
+545A 04               (                       DATA1.ASM):00502         FCB     $04
+545B 01               (                       DATA1.ASM):00503         FCB     $01
+545C 03               (                       DATA1.ASM):00504         FCB     $03
+545D 00               (                       DATA1.ASM):00505         FCB     $00
+545E 04               (                       DATA1.ASM):00506         FCB     $04
+545F 00               (                       DATA1.ASM):00507         FCB     $00
+5460 04               (                       DATA1.ASM):00508 D5460H  FCB     $04
+5461 00               (                       DATA1.ASM):00509         FCB     $00
+5462 04               (                       DATA1.ASM):00510         FCB     $04
+5463 00               (                       DATA1.ASM):00511         FCB     $00
+5464 04               (                       DATA1.ASM):00512         FCB     $04
+5465 00               (                       DATA1.ASM):00513         FCB     $00
+5466 04               (                       DATA1.ASM):00514         FCB     $04
+5467 00               (                       DATA1.ASM):00515         FCB     $00
+5468 04               (                       DATA1.ASM):00516 D5468H  FCB     $04
+5469 00               (                       DATA1.ASM):00517         FCB     $00
+546A 04               (                       DATA1.ASM):00518         FCB     $04
+546B 00               (                       DATA1.ASM):00519         FCB     $00
+546C 3F               (                       DATA1.ASM):00520         FCB     $3F
+546D 3F               (                       DATA1.ASM):00521         FCB     $3F
+546E 1F               (                       DATA1.ASM):00522         FCB     $1F
+546F 1F               (                       DATA1.ASM):00523         FCB     $1F
+5470 0F               (                       DATA1.ASM):00524 D5470H  FCB     $0F
+5471 0F               (                       DATA1.ASM):00525         FCB     $0F
+5472 0F               (                       DATA1.ASM):00526         FCB     $0F
+5473 0F               (                       DATA1.ASM):00527         FCB     $0F
+5474 07               (                       DATA1.ASM):00528         FCB     $07
+5475 07               (                       DATA1.ASM):00529         FCB     $07
+5476 07               (                       DATA1.ASM):00530         FCB     $07
+5477 07               (                       DATA1.ASM):00531         FCB     $07
+5478 07               (                       DATA1.ASM):00532 D5478H  FCB     $07
+5479 03               (                       DATA1.ASM):00533         FCB     $03
+547A 03               (                       DATA1.ASM):00534         FCB     $03
+547B 03               (                       DATA1.ASM):00535         FCB     $03
+547C 03               (                       DATA1.ASM):00536         FCB     $03
+547D 01               (                       DATA1.ASM):00537         FCB     $01
+547E 01               (                       DATA1.ASM):00538         FCB     $01
+547F 01               (                       DATA1.ASM):00539         FCB     $01
+5480 01               (                       DATA1.ASM):00540 D5480H  FCB     $01
+5481 1C               (                       DATA1.ASM):00541         FCB     $1C
+5482 1C               (                       DATA1.ASM):00542         FCB     $1C
+5483 1C               (                       DATA1.ASM):00543         FCB     $1C
+5484 18               (                       DATA1.ASM):00544         FCB     $18
+5485 18               (                       DATA1.ASM):00545         FCB     $18
+5486 18               (                       DATA1.ASM):00546         FCB     $18
+5487 18               (                       DATA1.ASM):00547         FCB     $18
+5488 14               (                       DATA1.ASM):00548 D5488H  FCB     $14
+5489 14               (                       DATA1.ASM):00549         FCB     $14
+548A 14               (                       DATA1.ASM):00550         FCB     $14
+548B 14               (                       DATA1.ASM):00551         FCB     $14
+548C 10               (                       DATA1.ASM):00552         FCB     $10
+548D 10               (                       DATA1.ASM):00553         FCB     $10
+548E 10               (                       DATA1.ASM):00554         FCB     $10
+548F 10               (                       DATA1.ASM):00555         FCB     $10
+5490 0C               (                       DATA1.ASM):00556 D5490H  FCB     $0C
+5491 0C               (                       DATA1.ASM):00557         FCB     $0C
+5492 0C               (                       DATA1.ASM):00558         FCB     $0C
+5493 0C               (                       DATA1.ASM):00559         FCB     $0C
+5494 08               (                       DATA1.ASM):00560         FCB     $08
+5495 08               (                       DATA1.ASM):00561         FCB     $08
+5496 05               (                       DATA1.ASM):00562         FCB     $05
+5497 80               (                       DATA1.ASM):00563         FCB     $80
+5498 05               (                       DATA1.ASM):00564 D5498H  FCB     $05
+5499 80               (                       DATA1.ASM):00565         FCB     $80
+549A 05               (                       DATA1.ASM):00566         FCB     $05
+549B 80               (                       DATA1.ASM):00567         FCB     $80
+549C 04               (                       DATA1.ASM):00568         FCB     $04
+549D 40               (                       DATA1.ASM):00569         FCB     $40
+549E 04               (                       DATA1.ASM):00570         FCB     $04
+549F 40               (                       DATA1.ASM):00571         FCB     $40
+54A0 04               (                       DATA1.ASM):00572 D54A0H  FCB     $04
+54A1 40               (                       DATA1.ASM):00573         FCB     $40
+54A2 03               (                       DATA1.ASM):00574         FCB     $03
+54A3 20               (                       DATA1.ASM):00575         FCB     $20
+54A4 03               (                       DATA1.ASM):00576         FCB     $03
+54A5 20               (                       DATA1.ASM):00577         FCB     $20
+54A6 03               (                       DATA1.ASM):00578         FCB     $03
+54A7 20               (                       DATA1.ASM):00579         FCB     $20
+54A8 03               (                       DATA1.ASM):00580 D54A8H  FCB     $03
+54A9 20               (                       DATA1.ASM):00581         FCB     $20
+54AA 02               (                       DATA1.ASM):00582         FCB     $02
+54AB 00               (                       DATA1.ASM):00583         FCB     $00
+54AC 02               (                       DATA1.ASM):00584         FCB     $02
+54AD 00               (                       DATA1.ASM):00585         FCB     $00
+54AE 02               (                       DATA1.ASM):00586         FCB     $02
+54AF 00               (                       DATA1.ASM):00587         FCB     $00
+54B0 02               (                       DATA1.ASM):00588 D54B0H  FCB     $02
+54B1 00               (                       DATA1.ASM):00589         FCB     $00
+54B2 02               (                       DATA1.ASM):00590         FCB     $02
+54B3 00               (                       DATA1.ASM):00591         FCB     $00
+54B4 02               (                       DATA1.ASM):00592         FCB     $02
+54B5 00               (                       DATA1.ASM):00593         FCB     $00
+54B6 02               (                       DATA1.ASM):00594         FCB     $02
+54B7 00               (                       DATA1.ASM):00595         FCB     $00
+54B8 02               (                       DATA1.ASM):00596 D54B8H  FCB     $02
+54B9 00               (                       DATA1.ASM):00597         FCB     $00
+54BA 02               (                       DATA1.ASM):00598         FCB     $02
+54BB 00               (                       DATA1.ASM):00599         FCB     $00
+54BC 02               (                       DATA1.ASM):00600         FCB     $02
+54BD 00               (                       DATA1.ASM):00601         FCB     $00
+54BE 02               (                       DATA1.ASM):00602         FCB     $02
+54BF 00               (                       DATA1.ASM):00603         FCB     $00
+54C0 00               (                       DATA1.ASM):00604 D54C0H  FCB     $00
+54C1 00               (                       DATA1.ASM):00605         FCB     $00
+54C2 00               (                       DATA1.ASM):00606         FCB     $00
+54C3 00               (                       DATA1.ASM):00607         FCB     $00
+54C4 01               (                       DATA1.ASM):00608         FCB     $01
+54C5 00               (                       DATA1.ASM):00609         FCB     $00
+54C6 00               (                       DATA1.ASM):00610         FCB     $00
+54C7 00               (                       DATA1.ASM):00611         FCB     $00
+54C8 00               (                       DATA1.ASM):00612 D54C8H  FCB     $00
+54C9 00               (                       DATA1.ASM):00613         FCB     $00
+54CA 01               (                       DATA1.ASM):00614         FCB     $01
+54CB 00               (                       DATA1.ASM):00615         FCB     $00
+54CC 00               (                       DATA1.ASM):00616         FCB     $00
+54CD 00               (                       DATA1.ASM):00617         FCB     $00
+54CE 00               (                       DATA1.ASM):00618         FCB     $00
+54CF 00               (                       DATA1.ASM):00619         FCB     $00
+54D0 02               (                       DATA1.ASM):00620 D54D0H  FCB     $02
+54D1 00               (                       DATA1.ASM):00621         FCB     $00
+54D2 00               (                       DATA1.ASM):00622         FCB     $00
+54D3 00               (                       DATA1.ASM):00623         FCB     $00
+54D4 00               (                       DATA1.ASM):00624         FCB     $00
+54D5 00               (                       DATA1.ASM):00625         FCB     $00
+54D6 02               (                       DATA1.ASM):00626         FCB     $02
+54D7 00               (                       DATA1.ASM):00627         FCB     $00
+54D8 00               (                       DATA1.ASM):00628 D54D8H  FCB     $00
+54D9 00               (                       DATA1.ASM):00629         FCB     $00
+54DA 00               (                       DATA1.ASM):00630         FCB     $00
+54DB 00               (                       DATA1.ASM):00631         FCB     $00
+54DC 02               (                       DATA1.ASM):00632         FCB     $02
+54DD 00               (                       DATA1.ASM):00633         FCB     $00
+54DE 00               (                       DATA1.ASM):00634         FCB     $00
+54DF 00               (                       DATA1.ASM):00635         FCB     $00
+54E0 00               (                       DATA1.ASM):00636 D54E0H  FCB     $00
+54E1 00               (                       DATA1.ASM):00637         FCB     $00
+54E2 04               (                       DATA1.ASM):00638         FCB     $04
+54E3 00               (                       DATA1.ASM):00639         FCB     $00
+54E4 00               (                       DATA1.ASM):00640         FCB     $00
+54E5 00               (                       DATA1.ASM):00641         FCB     $00
+54E6 00               (                       DATA1.ASM):00642         FCB     $00
+54E7 00               (                       DATA1.ASM):00643         FCB     $00
+54E8 04               (                       DATA1.ASM):00644 D54E8H  FCB     $04
+54E9 00               (                       DATA1.ASM):00645         FCB     $00
+54EA 00               (                       DATA1.ASM):00646         FCB     $00
+54EB 00               (                       DATA1.ASM):00647         FCB     $00
+54EC 00               (                       DATA1.ASM):00648         FCB     $00
+54ED 00               (                       DATA1.ASM):00649         FCB     $00
+54EE 04               (                       DATA1.ASM):00650         FCB     $04
+54EF 00               (                       DATA1.ASM):00651         FCB     $00
+54F0 00               (                       DATA1.ASM):00652 D54F0H  FCB     $00
+54F1 00               (                       DATA1.ASM):00653         FCB     $00
+54F2 00               (                       DATA1.ASM):00654         FCB     $00
+54F3 00               (                       DATA1.ASM):00655         FCB     $00
+54F4 04               (                       DATA1.ASM):00656         FCB     $04
+54F5 00               (                       DATA1.ASM):00657         FCB     $00
+54F6 00               (                       DATA1.ASM):00658         FCB     $00
+54F7 00               (                       DATA1.ASM):00659         FCB     $00
+54F8 00               (                       DATA1.ASM):00660 D54F8H  FCB     $00
+54F9 01               (                       DATA1.ASM):00661         FCB     $01
+54FA 00               (                       DATA1.ASM):00662         FCB     $00
+54FB 00               (                       DATA1.ASM):00663         FCB     $00
+54FC 00               (                       DATA1.ASM):00664         FCB     $00
+54FD 00               (                       DATA1.ASM):00665         FCB     $00
+54FE 00               (                       DATA1.ASM):00666         FCB     $00
+54FF 01               (                       DATA1.ASM):00667         FCB     $01
+5500 00               (                       DATA1.ASM):00668 D5500H  FCB     $00
+5501 00               (                       DATA1.ASM):00669         FCB     $00
+5502 00               (                       DATA1.ASM):00670         FCB     $00
+5503 00               (                       DATA1.ASM):00671         FCB     $00
+5504 00               (                       DATA1.ASM):00672         FCB     $00
+5505 01               (                       DATA1.ASM):00673         FCB     $01
+5506 00               (                       DATA1.ASM):00674         FCB     $00
+5507 00               (                       DATA1.ASM):00675         FCB     $00
+5508 00               (                       DATA1.ASM):00676 D5508H  FCB     $00
+5509 00               (                       DATA1.ASM):00677         FCB     $00
+550A 00               (                       DATA1.ASM):00678         FCB     $00
+550B 01               (                       DATA1.ASM):00679         FCB     $01
+550C 05               (                       DATA1.ASM):00680         FCB     $05
+550D 00               (                       DATA1.ASM):00681         FCB     $00
+550E 00               (                       DATA1.ASM):00682         FCB     $00
+550F 00               (                       DATA1.ASM):00683         FCB     $00
+5510 00               (                       DATA1.ASM):00684 D5510H  FCB     $00
+5511 01               (                       DATA1.ASM):00685         FCB     $01
+5512 05               (                       DATA1.ASM):00686         FCB     $05
+5513 00               (                       DATA1.ASM):00687         FCB     $00
+5514 00               (                       DATA1.ASM):00688         FCB     $00
+5515 00               (                       DATA1.ASM):00689         FCB     $00
+5516 00               (                       DATA1.ASM):00690         FCB     $00
+5517 01               (                       DATA1.ASM):00691         FCB     $01
+5518 05               (                       DATA1.ASM):00692 D5518H  FCB     $05
+5519 00               (                       DATA1.ASM):00693         FCB     $00
+551A 00               (                       DATA1.ASM):00694         FCB     $00
+551B 00               (                       DATA1.ASM):00695         FCB     $00
+551C 00               (                       DATA1.ASM):00696         FCB     $00
+551D 02               (                       DATA1.ASM):00697         FCB     $02
+551E 00               (                       DATA1.ASM):00698         FCB     $00
+551F 00               (                       DATA1.ASM):00699         FCB     $00
+5520 00               (                       DATA1.ASM):00700 D5520H  FCB     $00
+5521 00               (                       DATA1.ASM):00701         FCB     $00
+5522 00               (                       DATA1.ASM):00702         FCB     $00
+5523 02               (                       DATA1.ASM):00703         FCB     $02
+5524 00               (                       DATA1.ASM):00704         FCB     $00
+5525 00               (                       DATA1.ASM):00705         FCB     $00
+5526 00               (                       DATA1.ASM):00706         FCB     $00
+5527 00               (                       DATA1.ASM):00707         FCB     $00
+5528 00               (                       DATA1.ASM):00708 D5528H  FCB     $00
+5529 02               (                       DATA1.ASM):00709         FCB     $02
+552A 00               (                       DATA1.ASM):00710         FCB     $00
+552B 00               (                       DATA1.ASM):00711         FCB     $00
+552C 00               (                       DATA1.ASM):00712         FCB     $00
+552D 00               (                       DATA1.ASM):00713         FCB     $00
+552E 00               (                       DATA1.ASM):00714         FCB     $00
+552F 05               (                       DATA1.ASM):00715         FCB     $05
+5530 00               (                       DATA1.ASM):00716 D5530H  FCB     $00
+5531 00               (                       DATA1.ASM):00717         FCB     $00
+5532 00               (                       DATA1.ASM):00718         FCB     $00
+5533 00               (                       DATA1.ASM):00719         FCB     $00
+5534 00               (                       DATA1.ASM):00720         FCB     $00
+5535 05               (                       DATA1.ASM):00721         FCB     $05
+5536 00               (                       DATA1.ASM):00722         FCB     $00
+5537 00               (                       DATA1.ASM):00723         FCB     $00
+5538 00               (                       DATA1.ASM):00724 D5538H  FCB     $00
+5539 00               (                       DATA1.ASM):00725         FCB     $00
+553A 00               (                       DATA1.ASM):00726         FCB     $00
+553B 05               (                       DATA1.ASM):00727         FCB     $05
+553C 00               (                       DATA1.ASM):00728         FCB     $00
+553D 00               (                       DATA1.ASM):00729         FCB     $00
+553E 00               (                       DATA1.ASM):00730         FCB     $00
+553F 00               (                       DATA1.ASM):00731         FCB     $00
+5540 00               (                       DATA1.ASM):00732 D5540H  FCB     $00
+5541 00               (                       DATA1.ASM):00733         FCB     $00
+5542 01               (                       DATA1.ASM):00734         FCB     $01
+5543 00               (                       DATA1.ASM):00735         FCB     $00
+5544 00               (                       DATA1.ASM):00736         FCB     $00
+5545 00               (                       DATA1.ASM):00737         FCB     $00
+5546 00               (                       DATA1.ASM):00738         FCB     $00
+5547 00               (                       DATA1.ASM):00739         FCB     $00
+5548 05               (                       DATA1.ASM):00740 D5548H  FCB     $05
+5549 00               (                       DATA1.ASM):00741         FCB     $00
+554A 00               (                       DATA1.ASM):00742         FCB     $00
+554B 00               (                       DATA1.ASM):00743         FCB     $00
+554C 00               (                       DATA1.ASM):00744         FCB     $00
+554D 00               (                       DATA1.ASM):00745         FCB     $00
+554E 06               (                       DATA1.ASM):00746         FCB     $06
+554F 00               (                       DATA1.ASM):00747         FCB     $00
+5550 00               (                       DATA1.ASM):00748 D5550H  FCB     $00
+5551 00               (                       DATA1.ASM):00749         FCB     $00
+5552 00               (                       DATA1.ASM):00750         FCB     $00
+5553 00               (                       DATA1.ASM):00751         FCB     $00
+5554 08               (                       DATA1.ASM):00752         FCB     $08
+5555 00               (                       DATA1.ASM):00753         FCB     $00
+5556 00               (                       DATA1.ASM):00754         FCB     $00
+5557 00               (                       DATA1.ASM):00755         FCB     $00
+5558 00               (                       DATA1.ASM):00756 D5558H  FCB     $00
+5559 01               (                       DATA1.ASM):00757         FCB     $01
+555A 00               (                       DATA1.ASM):00758         FCB     $00
+555B 00               (                       DATA1.ASM):00759         FCB     $00
+555C 00               (                       DATA1.ASM):00760         FCB     $00
+555D 00               (                       DATA1.ASM):00761         FCB     $00
+555E 00               (                       DATA1.ASM):00762         FCB     $00
+555F 01               (                       DATA1.ASM):00763         FCB     $01
+5560 05               (                       DATA1.ASM):00764 D5560H  FCB     $05
+5561 00               (                       DATA1.ASM):00765         FCB     $00
+5562 00               (                       DATA1.ASM):00766         FCB     $00
+5563 00               (                       DATA1.ASM):00767         FCB     $00
+5564 00               (                       DATA1.ASM):00768         FCB     $00
+5565 02               (                       DATA1.ASM):00769         FCB     $02
+5566 00               (                       DATA1.ASM):00770         FCB     $00
+5567 00               (                       DATA1.ASM):00771         FCB     $00
+                      (                       DATA1.ASM):00772 
+5568 55               (                       DATA1.ASM):00773 D5568H  FCB     $55     ; Graphic-encoded 3x5
+5569 7E               (                       DATA1.ASM):00774         FCB     $7E     ; matrix number set for
+556A 55               (                       DATA1.ASM):00775         FCB     $55     ; printing scores
+556B 83               (                       DATA1.ASM):00776         FCB     $83
+556C 55               (                       DATA1.ASM):00777         FCB     $55
+556D 88               (                       DATA1.ASM):00778         FCB     $88
+556E 55               (                       DATA1.ASM):00779         FCB     $55
+556F 8D               (                       DATA1.ASM):00780         FCB     $8D
+5570 55               (                       DATA1.ASM):00781 D5570H  FCB     $55
+5571 92               (                       DATA1.ASM):00782         FCB     $92
+5572 55               (                       DATA1.ASM):00783         FCB     $55
+5573 97               (                       DATA1.ASM):00784         FCB     $97
+5574 55               (                       DATA1.ASM):00785         FCB     $55
+5575 9C               (                       DATA1.ASM):00786         FCB     $9C
+5576 55               (                       DATA1.ASM):00787         FCB     $55
+5577 A1               (                       DATA1.ASM):00788         FCB     $A1
+5578 55               (                       DATA1.ASM):00789 D5578H  FCB     $55
+5579 A6               (                       DATA1.ASM):00790         FCB     $A6
+557A 55               (                       DATA1.ASM):00791         FCB     $55
+557B AB               (                       DATA1.ASM):00792         FCB     $AB
+557C 55               (                       DATA1.ASM):00793         FCB     $55
+557D B0               (                       DATA1.ASM):00794         FCB     $B0
+557E FC               (                       DATA1.ASM):00795         FCB     $FC
+557F CC               (                       DATA1.ASM):00796         FCB     $CC
+5580 CC               (                       DATA1.ASM):00797 D5580H  FCB     $CC
+5581 CC               (                       DATA1.ASM):00798         FCB     $CC
+5582 FC               (                       DATA1.ASM):00799         FCB     $FC
+5583 30               (                       DATA1.ASM):00800         FCB     $30
+5584 30               (                       DATA1.ASM):00801         FCB     $30
+5585 30               (                       DATA1.ASM):00802         FCB     $30
+5586 30               (                       DATA1.ASM):00803         FCB     $30
+5587 30               (                       DATA1.ASM):00804         FCB     $30
+5588 FC               (                       DATA1.ASM):00805 D5588H  FCB     $FC
+5589 0C               (                       DATA1.ASM):00806         FCB     $0C
+558A FC               (                       DATA1.ASM):00807         FCB     $FC
+558B C0               (                       DATA1.ASM):00808         FCB     $C0
+558C FC               (                       DATA1.ASM):00809         FCB     $FC
+558D FC               (                       DATA1.ASM):00810         FCB     $FC
+558E 0C               (                       DATA1.ASM):00811         FCB     $0C
+558F FC               (                       DATA1.ASM):00812         FCB     $FC
+5590 0C               (                       DATA1.ASM):00813 D5590H  FCB     $0C
+5591 FC               (                       DATA1.ASM):00814         FCB     $FC
+5592 CC               (                       DATA1.ASM):00815         FCB     $CC
+5593 CC               (                       DATA1.ASM):00816         FCB     $CC
+5594 FC               (                       DATA1.ASM):00817         FCB     $FC
+5595 0C               (                       DATA1.ASM):00818         FCB     $0C
+5596 0C               (                       DATA1.ASM):00819         FCB     $0C
+5597 FC               (                       DATA1.ASM):00820         FCB     $FC
+5598 C0               (                       DATA1.ASM):00821 D5598H  FCB     $C0
+5599 FC               (                       DATA1.ASM):00822         FCB     $FC
+559A 0C               (                       DATA1.ASM):00823         FCB     $0C
+559B FC               (                       DATA1.ASM):00824         FCB     $FC
+559C FC               (                       DATA1.ASM):00825         FCB     $FC
+559D C0               (                       DATA1.ASM):00826         FCB     $C0
+559E FC               (                       DATA1.ASM):00827         FCB     $FC
+559F CC               (                       DATA1.ASM):00828         FCB     $CC
+55A0 FC               (                       DATA1.ASM):00829 D55A0H  FCB     $FC
+55A1 FC               (                       DATA1.ASM):00830         FCB     $FC
+55A2 0C               (                       DATA1.ASM):00831         FCB     $0C
+55A3 0C               (                       DATA1.ASM):00832         FCB     $0C
+55A4 0C               (                       DATA1.ASM):00833         FCB     $0C
+55A5 0C               (                       DATA1.ASM):00834         FCB     $0C
+55A6 FC               (                       DATA1.ASM):00835         FCB     $FC
+55A7 CC               (                       DATA1.ASM):00836         FCB     $CC
+55A8 FC               (                       DATA1.ASM):00837 D55A8H  FCB     $FC
+55A9 CC               (                       DATA1.ASM):00838         FCB     $CC
+55AA FC               (                       DATA1.ASM):00839         FCB     $FC
+55AB FC               (                       DATA1.ASM):00840         FCB     $FC
+55AC CC               (                       DATA1.ASM):00841         FCB     $CC
+55AD FC               (                       DATA1.ASM):00842         FCB     $FC
+55AE 0C               (                       DATA1.ASM):00843         FCB     $0C
+55AF 0C               (                       DATA1.ASM):00844         FCB     $0C
+55B0 00               (                       DATA1.ASM):00845 D55B0H  FCB     $00
+55B1 00               (                       DATA1.ASM):00846         FCB     $00
+55B2 00               (                       DATA1.ASM):00847         FCB     $00
+55B3 00               (                       DATA1.ASM):00848         FCB     $00
+55B4 00               (                       DATA1.ASM):00849         FCB     $00
+                      (                       DATA1.ASM):00850         END     D526DH
+
+Symbol Table:
+[ G] D526DH                           526D
+[ G] D5270H                           5270
+[ G] D5278H                           5278
+[ G] D5280H                           5280
+[ G] D5288H                           5288
+[ G] D5290H                           5290
+[ G] D5298H                           5298
+[ G] D52A0H                           52A0
+[ G] D52A8H                           52A8
+[ G] D52B0H                           52B0
+[ G] D52B8H                           52B8
+[ G] D52C0H                           52C0
+[ G] D52C8H                           52C8
+[ G] D52D0H                           52D0
+[ G] D52D8H                           52D8
+[ G] D52E0H                           52E0
+[ G] D52E8H                           52E8
+[ G] D52F0H                           52F0
+[ G] D52F8H                           52F8
+[ G] D5300H                           5300
+[ G] D5308H                           5308
+[ G] D5310H                           5310
+[ G] D5318H                           5318
+[ G] D5320H                           5320
+[ G] D5328H                           5328
+[ G] D5330H                           5330
+[ G] D5338H                           5338
+[ G] D5340H                           5340
+[ G] D5348H                           5348
+[ G] D5350H                           5350
+[ G] D5358H                           5358
+[ G] D5360H                           5360
+[ G] D5368H                           5368
+[ G] D5370H                           5370
+[ G] D5378H                           5378
+[ G] D5380H                           5380
+[ G] D5388H                           5388
+[ G] D5390H                           5390
+[ G] D5398H                           5398
+[ G] D53A0H                           53A0
+[ G] D53A8H                           53A8
+[ G] D53B0H                           53B0
+[ G] D53B8H                           53B8
+[ G] D53C0H                           53C0
+[ G] D53C8H                           53C8
+[ G] D53D0H                           53D0
+[ G] D53D8H                           53D8
+[ G] D53E0H                           53E0
+[ G] D53E8H                           53E8
+[ G] D53F0H                           53F0
+[ G] D53F8H                           53F8
+[ G] D5400H                           5400
+[ G] D5408H                           5408
+[ G] D5410H                           5410
+[ G] D5418H                           5418
+[ G] D5420H                           5420
+[ G] D5428H                           5428
+[ G] D5430H                           5430
+[ G] D5438H                           5438
+[ G] D5440H                           5440
+[ G] D5448H                           5448
+[ G] D5450H                           5450
+[ G] D5458H                           5458
+[ G] D5460H                           5460
+[ G] D5468H                           5468
+[ G] D5470H                           5470
+[ G] D5478H                           5478
+[ G] D5480H                           5480
+[ G] D5488H                           5488
+[ G] D5490H                           5490
+[ G] D5498H                           5498
+[ G] D54A0H                           54A0
+[ G] D54A8H                           54A8
+[ G] D54B0H                           54B0
+[ G] D54B8H                           54B8
+[ G] D54C0H                           54C0
+[ G] D54C8H                           54C8
+[ G] D54D0H                           54D0
+[ G] D54D8H                           54D8
+[ G] D54E0H                           54E0
+[ G] D54E8H                           54E8
+[ G] D54F0H                           54F0
+[ G] D54F8H                           54F8
+[ G] D5500H                           5500
+[ G] D5508H                           5508
+[ G] D5510H                           5510
+[ G] D5518H                           5518
+[ G] D5520H                           5520
+[ G] D5528H                           5528
+[ G] D5530H                           5530
+[ G] D5538H                           5538
+[ G] D5540H                           5540
+[ G] D5548H                           5548
+[ G] D5550H                           5550
+[ G] D5558H                           5558
+[ G] D5560H                           5560
+[ G] D5568H                           5568
+[ G] D5570H                           5570
+[ G] D5578H                           5578
+[ G] D5580H                           5580
+[ G] D5588H                           5588
+[ G] D5590H                           5590
+[ G] D5598H                           5598
+[ G] D55A0H                           55A0
+[ G] D55A8H                           55A8
+[ G] D55B0H                           55B0
