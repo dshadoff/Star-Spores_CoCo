@@ -1,0 +1,653 @@
+                      (       DATA4A.ASM):00001                 ORG     $5DC4
+5DC4 03               (       DATA4A.ASM):00002         D5DC4H  FCB     $03     ; Width (rounding up
+5DC5 03               (       DATA4A.ASM):00003                 FCB     $03     ; to nearest byte),
+5DC6 02               (       DATA4A.ASM):00004                 FCB     $02     ; of each type of Nastie
+5DC7 03               (       DATA4A.ASM):00005                 FCB     $03
+5DC8 02               (       DATA4A.ASM):00006         D5DC8H  FCB     $02
+5DC9 02               (       DATA4A.ASM):00007                 FCB     $02
+5DCA 02               (       DATA4A.ASM):00008                 FCB     $02
+5DCB 03               (       DATA4A.ASM):00009                 FCB     $03
+5DCC 03               (       DATA4A.ASM):00010                 FCB     $03
+                      (       DATA4A.ASM):00011         
+5DCD 06               (       DATA4A.ASM):00012                 FCB     $06     ; Height (in pixels),
+5DCE 03               (       DATA4A.ASM):00013                 FCB     $03     ; as above
+5DCF 05               (       DATA4A.ASM):00014                 FCB     $05
+5DD0 05               (       DATA4A.ASM):00015         D5DD0H  FCB     $05
+5DD1 08               (       DATA4A.ASM):00016                 FCB     $08
+5DD2 06               (       DATA4A.ASM):00017                 FCB     $06
+5DD3 05               (       DATA4A.ASM):00018                 FCB     $05
+5DD4 04               (       DATA4A.ASM):00019                 FCB     $04
+5DD5 06               (       DATA4A.ASM):00020                 FCB     $06
+                      (       DATA4A.ASM):00021         
+5DD6 78               (       DATA4A.ASM):00022                 FCB     $78     ; Maximum x-value (for
+5DD7 78               (       DATA4A.ASM):00023                 FCB     $78     ; right-edge cutoff)
+5DD8 7A               (       DATA4A.ASM):00024         D5DD8H  FCB     $7A     ; for each
+5DD9 78               (       DATA4A.ASM):00025                 FCB     $78
+5DDA 7A               (       DATA4A.ASM):00026                 FCB     $7A
+5DDB 7A               (       DATA4A.ASM):00027                 FCB     $7A
+5DDC 7C               (       DATA4A.ASM):00028                 FCB     $7C
+5DDD 78               (       DATA4A.ASM):00029                 FCB     $78
+5DDE 78               (       DATA4A.ASM):00030                 FCB     $78
+                      (       DATA4A.ASM):00031         
+5DDF 5D               (       DATA4A.ASM):00032                 FCB     $5D     ; Tables for animating
+5DE0 F1               (       DATA4A.ASM):00033         D5DE0H  FCB     $F1     ; figures
+5DE1 5D               (       DATA4A.ASM):00034                 FCB     $5D
+5DE2 F3               (       DATA4A.ASM):00035                 FCB     $F3
+5DE3 5D               (       DATA4A.ASM):00036                 FCB     $5D
+5DE4 FC               (       DATA4A.ASM):00037                 FCB     $FC
+5DE5 5E               (       DATA4A.ASM):00038                 FCB     $5E
+5DE6 03               (       DATA4A.ASM):00039                 FCB     $03
+5DE7 5E               (       DATA4A.ASM):00040                 FCB     $5E
+5DE8 10               (       DATA4A.ASM):00041         D5DE8H  FCB     $10
+5DE9 5E               (       DATA4A.ASM):00042                 FCB     $5E
+5DEA 15               (       DATA4A.ASM):00043                 FCB     $15
+5DEB 5E               (       DATA4A.ASM):00044                 FCB     $5E
+5DEC 17               (       DATA4A.ASM):00045                 FCB     $17
+5DED 5E               (       DATA4A.ASM):00046                 FCB     $5E
+5DEE 1B               (       DATA4A.ASM):00047                 FCB     $1B
+5DEF 5E               (       DATA4A.ASM):00048                 FCB     $5E
+5DF0 22               (       DATA4A.ASM):00049         D5DF0H  FCB     $22
+5DF1 00               (       DATA4A.ASM):00050                 FCB     $00
+5DF2 FF               (       DATA4A.ASM):00051                 FCB     $FF
+5DF3 00               (       DATA4A.ASM):00052                 FCB     $00
+5DF4 01               (       DATA4A.ASM):00053                 FCB     $01
+5DF5 02               (       DATA4A.ASM):00054                 FCB     $02
+5DF6 03               (       DATA4A.ASM):00055                 FCB     $03
+5DF7 04               (       DATA4A.ASM):00056                 FCB     $04
+5DF8 03               (       DATA4A.ASM):00057         D5DF8H  FCB     $03
+5DF9 02               (       DATA4A.ASM):00058                 FCB     $02
+5DFA 01               (       DATA4A.ASM):00059                 FCB     $01
+5DFB F8               (       DATA4A.ASM):00060                 FCB     $F8
+5DFC 00               (       DATA4A.ASM):00061                 FCB     $00
+5DFD 01               (       DATA4A.ASM):00062                 FCB     $01
+5DFE 02               (       DATA4A.ASM):00063                 FCB     $02
+5DFF 03               (       DATA4A.ASM):00064                 FCB     $03
+5E00 04               (       DATA4A.ASM):00065         D5E00H  FCB     $04
+5E01 05               (       DATA4A.ASM):00066                 FCB     $05
+5E02 FA               (       DATA4A.ASM):00067                 FCB     $FA
+5E03 00               (       DATA4A.ASM):00068                 FCB     $00
+5E04 01               (       DATA4A.ASM):00069                 FCB     $01
+5E05 02               (       DATA4A.ASM):00070                 FCB     $02
+5E06 03               (       DATA4A.ASM):00071                 FCB     $03
+5E07 02               (       DATA4A.ASM):00072                 FCB     $02
+5E08 01               (       DATA4A.ASM):00073         D5E08H  FCB     $01
+5E09 00               (       DATA4A.ASM):00074                 FCB     $00
+5E0A 04               (       DATA4A.ASM):00075                 FCB     $04
+5E0B 05               (       DATA4A.ASM):00076                 FCB     $05
+5E0C 06               (       DATA4A.ASM):00077                 FCB     $06
+5E0D 05               (       DATA4A.ASM):00078                 FCB     $05
+5E0E 04               (       DATA4A.ASM):00079                 FCB     $04
+5E0F F4               (       DATA4A.ASM):00080                 FCB     $F4
+5E10 00               (       DATA4A.ASM):00081         D5E10H  FCB     $00
+5E11 01               (       DATA4A.ASM):00082                 FCB     $01
+5E12 02               (       DATA4A.ASM):00083                 FCB     $02
+5E13 01               (       DATA4A.ASM):00084                 FCB     $01
+5E14 FC               (       DATA4A.ASM):00085                 FCB     $FC
+5E15 00               (       DATA4A.ASM):00086                 FCB     $00
+5E16 FF               (       DATA4A.ASM):00087                 FCB     $FF
+5E17 00               (       DATA4A.ASM):00088                 FCB     $00
+5E18 01               (       DATA4A.ASM):00089         D5E18H  FCB     $01
+5E19 02               (       DATA4A.ASM):00090                 FCB     $02
+5E1A FD               (       DATA4A.ASM):00091                 FCB     $FD
+5E1B 00               (       DATA4A.ASM):00092                 FCB     $00
+5E1C 01               (       DATA4A.ASM):00093                 FCB     $01
+5E1D 02               (       DATA4A.ASM):00094                 FCB     $02
+5E1E 03               (       DATA4A.ASM):00095                 FCB     $03
+5E1F 02               (       DATA4A.ASM):00096                 FCB     $02
+5E20 01               (       DATA4A.ASM):00097         D5E20H  FCB     $01
+5E21 FA               (       DATA4A.ASM):00098                 FCB     $FA
+5E22 00               (       DATA4A.ASM):00099                 FCB     $00
+5E23 01               (       DATA4A.ASM):00100                 FCB     $01
+5E24 02               (       DATA4A.ASM):00101                 FCB     $02
+5E25 03               (       DATA4A.ASM):00102                 FCB     $03
+5E26 04               (       DATA4A.ASM):00103                 FCB     $04
+5E27 FB               (       DATA4A.ASM):00104                 FCB     $FB
+                      (       DATA4A.ASM):00105         
+5E28 5E               (       DATA4A.ASM):00106         D5E28H  FCB     $5E     ; Tables of locations
+5E29 3A               (       DATA4A.ASM):00107                 FCB     $3A     ; of graphics data for
+5E2A 5E               (       DATA4A.ASM):00108                 FCB     $5E     ; Nasties
+5E2B 3C               (       DATA4A.ASM):00109                 FCB     $3C
+5E2C 5E               (       DATA4A.ASM):00110                 FCB     $5E
+5E2D 46               (       DATA4A.ASM):00111                 FCB     $46
+5E2E 5E               (       DATA4A.ASM):00112                 FCB     $5E
+5E2F 52               (       DATA4A.ASM):00113                 FCB     $52
+5E30 5E               (       DATA4A.ASM):00114         D5E30H  FCB     $5E
+5E31 60               (       DATA4A.ASM):00115                 FCB     $60
+5E32 5E               (       DATA4A.ASM):00116                 FCB     $5E
+5E33 66               (       DATA4A.ASM):00117                 FCB     $66
+5E34 5E               (       DATA4A.ASM):00118                 FCB     $5E
+5E35 68               (       DATA4A.ASM):00119                 FCB     $68
+5E36 5E               (       DATA4A.ASM):00120                 FCB     $5E
+5E37 6E               (       DATA4A.ASM):00121                 FCB     $6E
+5E38 5E               (       DATA4A.ASM):00122         D5E38H  FCB     $5E
+5E39 76               (       DATA4A.ASM):00123                 FCB     $76
+5E3A 5E               (       DATA4A.ASM):00124                 FCB     $5E
+5E3B 80               (       DATA4A.ASM):00125                 FCB     $80
+5E3C 5E               (       DATA4A.ASM):00126                 FCB     $5E
+5E3D 88               (       DATA4A.ASM):00127                 FCB     $88
+5E3E 5E               (       DATA4A.ASM):00128                 FCB     $5E
+5E3F 90               (       DATA4A.ASM):00129                 FCB     $90
+5E40 5E               (       DATA4A.ASM):00130         D5E40H  FCB     $5E
+5E41 98               (       DATA4A.ASM):00131                 FCB     $98
+5E42 5E               (       DATA4A.ASM):00132                 FCB     $5E
+5E43 A0               (       DATA4A.ASM):00133                 FCB     $A0
+5E44 5E               (       DATA4A.ASM):00134                 FCB     $5E
+5E45 A8               (       DATA4A.ASM):00135                 FCB     $A8
+5E46 5E               (       DATA4A.ASM):00136                 FCB     $5E
+5E47 B0               (       DATA4A.ASM):00137                 FCB     $B0
+5E48 5E               (       DATA4A.ASM):00138         D5E48H  FCB     $5E
+5E49 B8               (       DATA4A.ASM):00139                 FCB     $B8
+5E4A 5E               (       DATA4A.ASM):00140                 FCB     $5E
+5E4B C0               (       DATA4A.ASM):00141                 FCB     $C0
+5E4C 5E               (       DATA4A.ASM):00142                 FCB     $5E
+5E4D C8               (       DATA4A.ASM):00143                 FCB     $C8
+5E4E 5E               (       DATA4A.ASM):00144                 FCB     $5E
+5E4F D0               (       DATA4A.ASM):00145                 FCB     $D0
+5E50 5E               (       DATA4A.ASM):00146         D5E50H  FCB     $5E
+5E51 D8               (       DATA4A.ASM):00147                 FCB     $D8
+5E52 5E               (       DATA4A.ASM):00148                 FCB     $5E
+5E53 E0               (       DATA4A.ASM):00149                 FCB     $E0
+5E54 5E               (       DATA4A.ASM):00150                 FCB     $5E
+5E55 E8               (       DATA4A.ASM):00151                 FCB     $E8
+5E56 5E               (       DATA4A.ASM):00152                 FCB     $5E
+5E57 F0               (       DATA4A.ASM):00153                 FCB     $F0
+5E58 5E               (       DATA4A.ASM):00154         D5E58H  FCB     $5E
+5E59 F8               (       DATA4A.ASM):00155                 FCB     $F8
+5E5A 5F               (       DATA4A.ASM):00156                 FCB     $5F
+5E5B 00               (       DATA4A.ASM):00157                 FCB     $00
+5E5C 5F               (       DATA4A.ASM):00158                 FCB     $5F
+5E5D 08               (       DATA4A.ASM):00159                 FCB     $08
+5E5E 5F               (       DATA4A.ASM):00160                 FCB     $5F
+5E5F 10               (       DATA4A.ASM):00161                 FCB     $10
+5E60 5F               (       DATA4A.ASM):00162         D5E60H  FCB     $5F
+5E61 18               (       DATA4A.ASM):00163                 FCB     $18
+5E62 5F               (       DATA4A.ASM):00164                 FCB     $5F
+5E63 20               (       DATA4A.ASM):00165                 FCB     $20
+5E64 5F               (       DATA4A.ASM):00166                 FCB     $5F
+5E65 28               (       DATA4A.ASM):00167                 FCB     $28
+5E66 5F               (       DATA4A.ASM):00168                 FCB     $5F
+5E67 30               (       DATA4A.ASM):00169                 FCB     $30
+5E68 5F               (       DATA4A.ASM):00170         D5E68H  FCB     $5F
+5E69 38               (       DATA4A.ASM):00171                 FCB     $38
+5E6A 5F               (       DATA4A.ASM):00172                 FCB     $5F
+5E6B 40               (       DATA4A.ASM):00173                 FCB     $40
+5E6C 5F               (       DATA4A.ASM):00174                 FCB     $5F
+5E6D 48               (       DATA4A.ASM):00175                 FCB     $48
+5E6E 5F               (       DATA4A.ASM):00176                 FCB     $5F
+5E6F 50               (       DATA4A.ASM):00177                 FCB     $50
+5E70 5F               (       DATA4A.ASM):00178         D5E70H  FCB     $5F
+5E71 58               (       DATA4A.ASM):00179                 FCB     $58
+5E72 5F               (       DATA4A.ASM):00180                 FCB     $5F
+5E73 60               (       DATA4A.ASM):00181                 FCB     $60
+5E74 5F               (       DATA4A.ASM):00182                 FCB     $5F
+5E75 68               (       DATA4A.ASM):00183                 FCB     $68
+5E76 5F               (       DATA4A.ASM):00184                 FCB     $5F
+5E77 70               (       DATA4A.ASM):00185                 FCB     $70
+5E78 5F               (       DATA4A.ASM):00186         D5E78H  FCB     $5F
+5E79 78               (       DATA4A.ASM):00187                 FCB     $78
+5E7A 5F               (       DATA4A.ASM):00188                 FCB     $5F
+5E7B 80               (       DATA4A.ASM):00189                 FCB     $80
+5E7C 5F               (       DATA4A.ASM):00190                 FCB     $5F
+5E7D 88               (       DATA4A.ASM):00191                 FCB     $88
+5E7E 5F               (       DATA4A.ASM):00192                 FCB     $5F
+5E7F 90               (       DATA4A.ASM):00193                 FCB     $90
+5E80 60               (       DATA4A.ASM):00194         D5E80H  FCB     $60
+5E81 00               (       DATA4A.ASM):00195                 FCB     $00
+5E82 60               (       DATA4A.ASM):00196                 FCB     $60
+5E83 12               (       DATA4A.ASM):00197                 FCB     $12
+5E84 60               (       DATA4A.ASM):00198                 FCB     $60
+5E85 24               (       DATA4A.ASM):00199                 FCB     $24
+5E86 60               (       DATA4A.ASM):00200                 FCB     $60
+5E87 36               (       DATA4A.ASM):00201                 FCB     $36
+5E88 60               (       DATA4A.ASM):00202         D5E88H  FCB     $60
+5E89 48               (       DATA4A.ASM):00203                 FCB     $48
+5E8A 60               (       DATA4A.ASM):00204                 FCB     $60
+5E8B 51               (       DATA4A.ASM):00205                 FCB     $51
+5E8C 60               (       DATA4A.ASM):00206                 FCB     $60
+5E8D 5A               (       DATA4A.ASM):00207                 FCB     $5A
+5E8E 60               (       DATA4A.ASM):00208                 FCB     $60
+5E8F 63               (       DATA4A.ASM):00209                 FCB     $63
+5E90 60               (       DATA4A.ASM):00210         D5E90H  FCB     $60
+5E91 6C               (       DATA4A.ASM):00211                 FCB     $6C
+5E92 60               (       DATA4A.ASM):00212                 FCB     $60
+5E93 75               (       DATA4A.ASM):00213                 FCB     $75
+5E94 60               (       DATA4A.ASM):00214                 FCB     $60
+5E95 7E               (       DATA4A.ASM):00215                 FCB     $7E
+5E96 60               (       DATA4A.ASM):00216                 FCB     $60
+5E97 87               (       DATA4A.ASM):00217                 FCB     $87
+5E98 60               (       DATA4A.ASM):00218         D5E98H  FCB     $60
+5E99 90               (       DATA4A.ASM):00219                 FCB     $90
+5E9A 60               (       DATA4A.ASM):00220                 FCB     $60
+5E9B 99               (       DATA4A.ASM):00221                 FCB     $99
+5E9C 60               (       DATA4A.ASM):00222                 FCB     $60
+5E9D A2               (       DATA4A.ASM):00223                 FCB     $A2
+5E9E 60               (       DATA4A.ASM):00224                 FCB     $60
+5E9F AB               (       DATA4A.ASM):00225                 FCB     $AB
+5EA0 60               (       DATA4A.ASM):00226         D5EA0H  FCB     $60
+5EA1 B4               (       DATA4A.ASM):00227                 FCB     $B4
+5EA2 60               (       DATA4A.ASM):00228                 FCB     $60
+5EA3 BD               (       DATA4A.ASM):00229                 FCB     $BD
+5EA4 60               (       DATA4A.ASM):00230                 FCB     $60
+5EA5 C6               (       DATA4A.ASM):00231                 FCB     $C6
+5EA6 60               (       DATA4A.ASM):00232                 FCB     $60
+5EA7 CF               (       DATA4A.ASM):00233                 FCB     $CF
+5EA8 60               (       DATA4A.ASM):00234         D5EA8H  FCB     $60
+5EA9 D8               (       DATA4A.ASM):00235                 FCB     $D8
+5EAA 60               (       DATA4A.ASM):00236                 FCB     $60
+5EAB E1               (       DATA4A.ASM):00237                 FCB     $E1
+5EAC 60               (       DATA4A.ASM):00238                 FCB     $60
+5EAD EA               (       DATA4A.ASM):00239                 FCB     $EA
+5EAE 60               (       DATA4A.ASM):00240                 FCB     $60
+5EAF F3               (       DATA4A.ASM):00241                 FCB     $F3
+5EB0 60               (       DATA4A.ASM):00242         D5EB0H  FCB     $60
+5EB1 FC               (       DATA4A.ASM):00243                 FCB     $FC
+5EB2 61               (       DATA4A.ASM):00244                 FCB     $61
+5EB3 06               (       DATA4A.ASM):00245                 FCB     $06
+5EB4 61               (       DATA4A.ASM):00246                 FCB     $61
+5EB5 10               (       DATA4A.ASM):00247                 FCB     $10
+5EB6 61               (       DATA4A.ASM):00248                 FCB     $61
+5EB7 1A               (       DATA4A.ASM):00249                 FCB     $1A
+5EB8 61               (       DATA4A.ASM):00250         D5EB8H  FCB     $61
+5EB9 24               (       DATA4A.ASM):00251                 FCB     $24
+5EBA 61               (       DATA4A.ASM):00252                 FCB     $61
+5EBB 2E               (       DATA4A.ASM):00253                 FCB     $2E
+5EBC 61               (       DATA4A.ASM):00254                 FCB     $61
+5EBD 38               (       DATA4A.ASM):00255                 FCB     $38
+5EBE 61               (       DATA4A.ASM):00256                 FCB     $61
+5EBF 42               (       DATA4A.ASM):00257                 FCB     $42
+5EC0 61               (       DATA4A.ASM):00258         D5EC0H  FCB     $61
+5EC1 4C               (       DATA4A.ASM):00259                 FCB     $4C
+5EC2 61               (       DATA4A.ASM):00260                 FCB     $61
+5EC3 56               (       DATA4A.ASM):00261                 FCB     $56
+5EC4 61               (       DATA4A.ASM):00262                 FCB     $61
+5EC5 60               (       DATA4A.ASM):00263                 FCB     $60
+5EC6 61               (       DATA4A.ASM):00264                 FCB     $61
+5EC7 6A               (       DATA4A.ASM):00265                 FCB     $6A
+5EC8 61               (       DATA4A.ASM):00266         D5EC8H  FCB     $61
+5EC9 74               (       DATA4A.ASM):00267                 FCB     $74
+5ECA 61               (       DATA4A.ASM):00268                 FCB     $61
+5ECB 7E               (       DATA4A.ASM):00269                 FCB     $7E
+5ECC 61               (       DATA4A.ASM):00270                 FCB     $61
+5ECD 88               (       DATA4A.ASM):00271                 FCB     $88
+5ECE 61               (       DATA4A.ASM):00272                 FCB     $61
+5ECF 92               (       DATA4A.ASM):00273                 FCB     $92
+5ED0 61               (       DATA4A.ASM):00274         D5ED0H  FCB     $61
+5ED1 9C               (       DATA4A.ASM):00275                 FCB     $9C
+5ED2 61               (       DATA4A.ASM):00276                 FCB     $61
+5ED3 A6               (       DATA4A.ASM):00277                 FCB     $A6
+5ED4 61               (       DATA4A.ASM):00278                 FCB     $61
+5ED5 B0               (       DATA4A.ASM):00279                 FCB     $B0
+5ED6 61               (       DATA4A.ASM):00280                 FCB     $61
+5ED7 BA               (       DATA4A.ASM):00281                 FCB     $BA
+5ED8 61               (       DATA4A.ASM):00282         D5ED8H  FCB     $61
+5ED9 C4               (       DATA4A.ASM):00283                 FCB     $C4
+5EDA 61               (       DATA4A.ASM):00284                 FCB     $61
+5EDB CE               (       DATA4A.ASM):00285                 FCB     $CE
+5EDC 61               (       DATA4A.ASM):00286                 FCB     $61
+5EDD D8               (       DATA4A.ASM):00287                 FCB     $D8
+5EDE 61               (       DATA4A.ASM):00288                 FCB     $61
+5EDF E2               (       DATA4A.ASM):00289                 FCB     $E2
+5EE0 61               (       DATA4A.ASM):00290         D5EE0H  FCB     $61
+5EE1 EC               (       DATA4A.ASM):00291                 FCB     $EC
+5EE2 61               (       DATA4A.ASM):00292                 FCB     $61
+5EE3 FB               (       DATA4A.ASM):00293                 FCB     $FB
+5EE4 62               (       DATA4A.ASM):00294                 FCB     $62
+5EE5 0A               (       DATA4A.ASM):00295                 FCB     $0A
+5EE6 62               (       DATA4A.ASM):00296                 FCB     $62
+5EE7 19               (       DATA4A.ASM):00297                 FCB     $19
+5EE8 62               (       DATA4A.ASM):00298         D5EE8H  FCB     $62
+5EE9 28               (       DATA4A.ASM):00299                 FCB     $28
+5EEA 62               (       DATA4A.ASM):00300                 FCB     $62
+5EEB 37               (       DATA4A.ASM):00301                 FCB     $37
+5EEC 62               (       DATA4A.ASM):00302                 FCB     $62
+5EED 46               (       DATA4A.ASM):00303                 FCB     $46
+5EEE 62               (       DATA4A.ASM):00304                 FCB     $62
+5EEF 55               (       DATA4A.ASM):00305                 FCB     $55
+5EF0 62               (       DATA4A.ASM):00306         D5EF0H  FCB     $62
+5EF1 64               (       DATA4A.ASM):00307                 FCB     $64
+5EF2 62               (       DATA4A.ASM):00308                 FCB     $62
+5EF3 73               (       DATA4A.ASM):00309                 FCB     $73
+5EF4 62               (       DATA4A.ASM):00310                 FCB     $62
+5EF5 82               (       DATA4A.ASM):00311                 FCB     $82
+5EF6 62               (       DATA4A.ASM):00312                 FCB     $62
+5EF7 91               (       DATA4A.ASM):00313                 FCB     $91
+5EF8 62               (       DATA4A.ASM):00314         D5EF8H  FCB     $62
+5EF9 A0               (       DATA4A.ASM):00315                 FCB     $A0
+5EFA 62               (       DATA4A.ASM):00316                 FCB     $62
+5EFB AF               (       DATA4A.ASM):00317                 FCB     $AF
+5EFC 62               (       DATA4A.ASM):00318                 FCB     $62
+5EFD BE               (       DATA4A.ASM):00319                 FCB     $BE
+5EFE 62               (       DATA4A.ASM):00320                 FCB     $62
+5EFF CD               (       DATA4A.ASM):00321                 FCB     $CD
+5F00 62               (       DATA4A.ASM):00322         D5F00H  FCB     $62
+5F01 DC               (       DATA4A.ASM):00323                 FCB     $DC
+5F02 62               (       DATA4A.ASM):00324                 FCB     $62
+5F03 EB               (       DATA4A.ASM):00325                 FCB     $EB
+5F04 62               (       DATA4A.ASM):00326                 FCB     $62
+5F05 FA               (       DATA4A.ASM):00327                 FCB     $FA
+5F06 63               (       DATA4A.ASM):00328                 FCB     $63
+5F07 09               (       DATA4A.ASM):00329                 FCB     $09
+5F08 63               (       DATA4A.ASM):00330         D5F08H  FCB     $63
+5F09 18               (       DATA4A.ASM):00331                 FCB     $18
+5F0A 63               (       DATA4A.ASM):00332                 FCB     $63
+5F0B 27               (       DATA4A.ASM):00333                 FCB     $27
+5F0C 63               (       DATA4A.ASM):00334                 FCB     $63
+5F0D 36               (       DATA4A.ASM):00335                 FCB     $36
+5F0E 63               (       DATA4A.ASM):00336                 FCB     $63
+5F0F 45               (       DATA4A.ASM):00337                 FCB     $45
+5F10 63               (       DATA4A.ASM):00338         D5F10H  FCB     $63
+5F11 54               (       DATA4A.ASM):00339                 FCB     $54
+5F12 63               (       DATA4A.ASM):00340                 FCB     $63
+5F13 63               (       DATA4A.ASM):00341                 FCB     $63
+5F14 63               (       DATA4A.ASM):00342                 FCB     $63
+5F15 72               (       DATA4A.ASM):00343                 FCB     $72
+5F16 63               (       DATA4A.ASM):00344                 FCB     $63
+5F17 81               (       DATA4A.ASM):00345                 FCB     $81
+5F18 63               (       DATA4A.ASM):00346         D5F18H  FCB     $63
+5F19 90               (       DATA4A.ASM):00347                 FCB     $90
+5F1A 63               (       DATA4A.ASM):00348                 FCB     $63
+5F1B A0               (       DATA4A.ASM):00349                 FCB     $A0
+5F1C 63               (       DATA4A.ASM):00350                 FCB     $63
+5F1D B0               (       DATA4A.ASM):00351                 FCB     $B0
+5F1E 63               (       DATA4A.ASM):00352                 FCB     $63
+5F1F C0               (       DATA4A.ASM):00353                 FCB     $C0
+5F20 63               (       DATA4A.ASM):00354         D5F20H  FCB     $63
+5F21 D0               (       DATA4A.ASM):00355                 FCB     $D0
+5F22 63               (       DATA4A.ASM):00356                 FCB     $63
+5F23 E0               (       DATA4A.ASM):00357                 FCB     $E0
+5F24 63               (       DATA4A.ASM):00358                 FCB     $63
+5F25 F0               (       DATA4A.ASM):00359                 FCB     $F0
+5F26 64               (       DATA4A.ASM):00360                 FCB     $64
+5F27 00               (       DATA4A.ASM):00361                 FCB     $00
+5F28 64               (       DATA4A.ASM):00362         D5F28H  FCB     $64
+5F29 10               (       DATA4A.ASM):00363                 FCB     $10
+5F2A 64               (       DATA4A.ASM):00364                 FCB     $64
+5F2B 20               (       DATA4A.ASM):00365                 FCB     $20
+5F2C 64               (       DATA4A.ASM):00366                 FCB     $64
+5F2D 30               (       DATA4A.ASM):00367                 FCB     $30
+5F2E 64               (       DATA4A.ASM):00368                 FCB     $64
+5F2F 40               (       DATA4A.ASM):00369                 FCB     $40
+5F30 64               (       DATA4A.ASM):00370         D5F30H  FCB     $64
+5F31 50               (       DATA4A.ASM):00371                 FCB     $50
+5F32 64               (       DATA4A.ASM):00372                 FCB     $64
+5F33 5C               (       DATA4A.ASM):00373                 FCB     $5C
+5F34 64               (       DATA4A.ASM):00374                 FCB     $64
+5F35 68               (       DATA4A.ASM):00375                 FCB     $68
+5F36 64               (       DATA4A.ASM):00376                 FCB     $64
+5F37 74               (       DATA4A.ASM):00377                 FCB     $74
+5F38 64               (       DATA4A.ASM):00378         D5F38H  FCB     $64
+5F39 80               (       DATA4A.ASM):00379                 FCB     $80
+5F3A 64               (       DATA4A.ASM):00380                 FCB     $64
+5F3B 8A               (       DATA4A.ASM):00381                 FCB     $8A
+5F3C 64               (       DATA4A.ASM):00382                 FCB     $64
+5F3D 94               (       DATA4A.ASM):00383                 FCB     $94
+5F3E 64               (       DATA4A.ASM):00384                 FCB     $64
+5F3F 9E               (       DATA4A.ASM):00385                 FCB     $9E
+5F40 64               (       DATA4A.ASM):00386         D5F40H  FCB     $64
+5F41 A8               (       DATA4A.ASM):00387                 FCB     $A8
+5F42 64               (       DATA4A.ASM):00388                 FCB     $64
+5F43 B2               (       DATA4A.ASM):00389                 FCB     $B2
+5F44 64               (       DATA4A.ASM):00390                 FCB     $64
+5F45 BC               (       DATA4A.ASM):00391                 FCB     $BC
+5F46 64               (       DATA4A.ASM):00392                 FCB     $64
+5F47 C6               (       DATA4A.ASM):00393                 FCB     $C6
+5F48 64               (       DATA4A.ASM):00394         D5F48H  FCB     $64
+5F49 D0               (       DATA4A.ASM):00395                 FCB     $D0
+5F4A 64               (       DATA4A.ASM):00396                 FCB     $64
+5F4B DA               (       DATA4A.ASM):00397                 FCB     $DA
+5F4C 64               (       DATA4A.ASM):00398                 FCB     $64
+5F4D E4               (       DATA4A.ASM):00399                 FCB     $E4
+5F4E 64               (       DATA4A.ASM):00400                 FCB     $64
+5F4F EE               (       DATA4A.ASM):00401                 FCB     $EE
+5F50 64               (       DATA4A.ASM):00402         D5F50H  FCB     $64
+5F51 F8               (       DATA4A.ASM):00403                 FCB     $F8
+5F52 65               (       DATA4A.ASM):00404                 FCB     $65
+5F53 04               (       DATA4A.ASM):00405                 FCB     $04
+5F54 65               (       DATA4A.ASM):00406                 FCB     $65
+5F55 10               (       DATA4A.ASM):00407                 FCB     $10
+5F56 65               (       DATA4A.ASM):00408                 FCB     $65
+5F57 1C               (       DATA4A.ASM):00409                 FCB     $1C
+5F58 65               (       DATA4A.ASM):00410         D5F58H  FCB     $65
+5F59 28               (       DATA4A.ASM):00411                 FCB     $28
+5F5A 65               (       DATA4A.ASM):00412                 FCB     $65
+5F5B 34               (       DATA4A.ASM):00413                 FCB     $34
+5F5C 65               (       DATA4A.ASM):00414                 FCB     $65
+5F5D 40               (       DATA4A.ASM):00415                 FCB     $40
+5F5E 65               (       DATA4A.ASM):00416                 FCB     $65
+5F5F 4C               (       DATA4A.ASM):00417                 FCB     $4C
+5F60 65               (       DATA4A.ASM):00418         D5F60H  FCB     $65
+5F61 58               (       DATA4A.ASM):00419                 FCB     $58
+5F62 65               (       DATA4A.ASM):00420                 FCB     $65
+5F63 64               (       DATA4A.ASM):00421                 FCB     $64
+5F64 65               (       DATA4A.ASM):00422                 FCB     $65
+5F65 70               (       DATA4A.ASM):00423                 FCB     $70
+5F66 65               (       DATA4A.ASM):00424                 FCB     $65
+5F67 7C               (       DATA4A.ASM):00425                 FCB     $7C
+5F68 65               (       DATA4A.ASM):00426         D5F68H  FCB     $65
+5F69 88               (       DATA4A.ASM):00427                 FCB     $88
+5F6A 65               (       DATA4A.ASM):00428                 FCB     $65
+5F6B 94               (       DATA4A.ASM):00429                 FCB     $94
+5F6C 65               (       DATA4A.ASM):00430                 FCB     $65
+5F6D A0               (       DATA4A.ASM):00431                 FCB     $A0
+5F6E 65               (       DATA4A.ASM):00432                 FCB     $65
+5F6F AC               (       DATA4A.ASM):00433                 FCB     $AC
+5F70 65               (       DATA4A.ASM):00434         D5F70H  FCB     $65
+5F71 B8               (       DATA4A.ASM):00435                 FCB     $B8
+5F72 65               (       DATA4A.ASM):00436                 FCB     $65
+5F73 CA               (       DATA4A.ASM):00437                 FCB     $CA
+5F74 65               (       DATA4A.ASM):00438                 FCB     $65
+5F75 DC               (       DATA4A.ASM):00439                 FCB     $DC
+5F76 65               (       DATA4A.ASM):00440                 FCB     $65
+5F77 EE               (       DATA4A.ASM):00441                 FCB     $EE
+5F78 66               (       DATA4A.ASM):00442         D5F78H  FCB     $66
+5F79 00               (       DATA4A.ASM):00443                 FCB     $00
+5F7A 66               (       DATA4A.ASM):00444                 FCB     $66
+5F7B 12               (       DATA4A.ASM):00445                 FCB     $12
+5F7C 66               (       DATA4A.ASM):00446                 FCB     $66
+5F7D 24               (       DATA4A.ASM):00447                 FCB     $24
+5F7E 66               (       DATA4A.ASM):00448                 FCB     $66
+5F7F 36               (       DATA4A.ASM):00449                 FCB     $36
+5F80 66               (       DATA4A.ASM):00450         D5F80H  FCB     $66
+5F81 48               (       DATA4A.ASM):00451                 FCB     $48
+5F82 66               (       DATA4A.ASM):00452                 FCB     $66
+5F83 5A               (       DATA4A.ASM):00453                 FCB     $5A
+5F84 66               (       DATA4A.ASM):00454                 FCB     $66
+5F85 6C               (       DATA4A.ASM):00455                 FCB     $6C
+5F86 66               (       DATA4A.ASM):00456                 FCB     $66
+5F87 7E               (       DATA4A.ASM):00457                 FCB     $7E
+5F88 66               (       DATA4A.ASM):00458         D5F88H  FCB     $66
+5F89 90               (       DATA4A.ASM):00459                 FCB     $90
+5F8A 66               (       DATA4A.ASM):00460                 FCB     $66
+5F8B A2               (       DATA4A.ASM):00461                 FCB     $A2
+5F8C 66               (       DATA4A.ASM):00462                 FCB     $66
+5F8D B4               (       DATA4A.ASM):00463                 FCB     $B4
+5F8E 66               (       DATA4A.ASM):00464                 FCB     $66
+5F8F C6               (       DATA4A.ASM):00465                 FCB     $C6
+5F90 66               (       DATA4A.ASM):00466         D5F90H  FCB     $66
+5F91 D8               (       DATA4A.ASM):00467                 FCB     $D8
+5F92 66               (       DATA4A.ASM):00468                 FCB     $66
+5F93 D8               (       DATA4A.ASM):00469                 FCB     $D8
+5F94 66               (       DATA4A.ASM):00470                 FCB     $66
+5F95 D8               (       DATA4A.ASM):00471                 FCB     $D8
+5F96 66               (       DATA4A.ASM):00472                 FCB     $66
+5F97 D8               (       DATA4A.ASM):00473                 FCB     $D8
+                      (       DATA4A.ASM):00474         
+5F98 5F               (       DATA4A.ASM):00475         D5F98H  FCB     $5F     ; Tables of graphic
+5F99 A0               (       DATA4A.ASM):00476                 FCB     $A0     ; data of player's ship
+5F9A 5F               (       DATA4A.ASM):00477                 FCB     $5F
+5F9B B8               (       DATA4A.ASM):00478                 FCB     $B8
+5F9C 5F               (       DATA4A.ASM):00479                 FCB     $5F
+5F9D D0               (       DATA4A.ASM):00480                 FCB     $D0
+5F9E 5F               (       DATA4A.ASM):00481                 FCB     $5F
+5F9F E8               (       DATA4A.ASM):00482                 FCB     $E8
+5FA0 04               (       DATA4A.ASM):00483         D5FA0H  FCB     $04
+5FA1 00               (       DATA4A.ASM):00484                 FCB     $00
+5FA2 04               (       DATA4A.ASM):00485                 FCB     $04
+5FA3 00               (       DATA4A.ASM):00486                 FCB     $00
+5FA4 04               (       DATA4A.ASM):00487                 FCB     $04
+5FA5 15               (       DATA4A.ASM):00488                 FCB     $15
+5FA6 04               (       DATA4A.ASM):00489                 FCB     $04
+5FA7 00               (       DATA4A.ASM):00490                 FCB     $00
+5FA8 14               (       DATA4A.ASM):00491         D5FA8H  FCB     $14
+5FA9 51               (       DATA4A.ASM):00492                 FCB     $51
+5FAA 45               (       DATA4A.ASM):00493                 FCB     $45
+5FAB 00               (       DATA4A.ASM):00494                 FCB     $00
+5FAC 55               (       DATA4A.ASM):00495                 FCB     $55
+5FAD 44               (       DATA4A.ASM):00496                 FCB     $44
+5FAE 55               (       DATA4A.ASM):00497                 FCB     $55
+5FAF 40               (       DATA4A.ASM):00498                 FCB     $40
+5FB0 14               (       DATA4A.ASM):00499         D5FB0H  FCB     $14
+5FB1 51               (       DATA4A.ASM):00500                 FCB     $51
+5FB2 45               (       DATA4A.ASM):00501                 FCB     $45
+5FB3 00               (       DATA4A.ASM):00502                 FCB     $00
+5FB4 00               (       DATA4A.ASM):00503                 FCB     $00
+5FB5 15               (       DATA4A.ASM):00504                 FCB     $15
+5FB6 00               (       DATA4A.ASM):00505                 FCB     $00
+5FB7 00               (       DATA4A.ASM):00506                 FCB     $00
+5FB8 01               (       DATA4A.ASM):00507         D5FB8H  FCB     $01
+5FB9 00               (       DATA4A.ASM):00508                 FCB     $00
+5FBA 01               (       DATA4A.ASM):00509                 FCB     $01
+5FBB 00               (       DATA4A.ASM):00510                 FCB     $00
+5FBC 01               (       DATA4A.ASM):00511                 FCB     $01
+5FBD 05               (       DATA4A.ASM):00512                 FCB     $05
+5FBE 41               (       DATA4A.ASM):00513                 FCB     $41
+5FBF 00               (       DATA4A.ASM):00514                 FCB     $00
+5FC0 05               (       DATA4A.ASM):00515         D5FC0H  FCB     $05
+5FC1 14               (       DATA4A.ASM):00516                 FCB     $14
+5FC2 51               (       DATA4A.ASM):00517                 FCB     $51
+5FC3 40               (       DATA4A.ASM):00518                 FCB     $40
+5FC4 15               (       DATA4A.ASM):00519                 FCB     $15
+5FC5 51               (       DATA4A.ASM):00520                 FCB     $51
+5FC6 15               (       DATA4A.ASM):00521                 FCB     $15
+5FC7 50               (       DATA4A.ASM):00522                 FCB     $50
+5FC8 05               (       DATA4A.ASM):00523         D5FC8H  FCB     $05
+5FC9 14               (       DATA4A.ASM):00524                 FCB     $14
+5FCA 51               (       DATA4A.ASM):00525                 FCB     $51
+5FCB 40               (       DATA4A.ASM):00526                 FCB     $40
+5FCC 00               (       DATA4A.ASM):00527                 FCB     $00
+5FCD 05               (       DATA4A.ASM):00528                 FCB     $05
+5FCE 40               (       DATA4A.ASM):00529                 FCB     $40
+5FCF 00               (       DATA4A.ASM):00530                 FCB     $00
+5FD0 00               (       DATA4A.ASM):00531         D5FD0H  FCB     $00
+5FD1 40               (       DATA4A.ASM):00532                 FCB     $40
+5FD2 00               (       DATA4A.ASM):00533                 FCB     $00
+5FD3 40               (       DATA4A.ASM):00534                 FCB     $40
+5FD4 00               (       DATA4A.ASM):00535                 FCB     $00
+5FD5 41               (       DATA4A.ASM):00536                 FCB     $41
+5FD6 50               (       DATA4A.ASM):00537                 FCB     $50
+5FD7 40               (       DATA4A.ASM):00538                 FCB     $40
+5FD8 01               (       DATA4A.ASM):00539         D5FD8H  FCB     $01
+5FD9 45               (       DATA4A.ASM):00540                 FCB     $45
+5FDA 14               (       DATA4A.ASM):00541                 FCB     $14
+5FDB 50               (       DATA4A.ASM):00542                 FCB     $50
+5FDC 05               (       DATA4A.ASM):00543                 FCB     $05
+5FDD 54               (       DATA4A.ASM):00544                 FCB     $54
+5FDE 45               (       DATA4A.ASM):00545                 FCB     $45
+5FDF 54               (       DATA4A.ASM):00546                 FCB     $54
+5FE0 01               (       DATA4A.ASM):00547         D5FE0H  FCB     $01
+5FE1 45               (       DATA4A.ASM):00548                 FCB     $45
+5FE2 14               (       DATA4A.ASM):00549                 FCB     $14
+5FE3 50               (       DATA4A.ASM):00550                 FCB     $50
+5FE4 00               (       DATA4A.ASM):00551                 FCB     $00
+5FE5 01               (       DATA4A.ASM):00552                 FCB     $01
+5FE6 50               (       DATA4A.ASM):00553                 FCB     $50
+5FE7 00               (       DATA4A.ASM):00554                 FCB     $00
+5FE8 00               (       DATA4A.ASM):00555         D5FE8H  FCB     $00
+5FE9 10               (       DATA4A.ASM):00556                 FCB     $10
+5FEA 00               (       DATA4A.ASM):00557                 FCB     $00
+5FEB 10               (       DATA4A.ASM):00558                 FCB     $10
+5FEC 00               (       DATA4A.ASM):00559                 FCB     $00
+5FED 10               (       DATA4A.ASM):00560                 FCB     $10
+5FEE 54               (       DATA4A.ASM):00561                 FCB     $54
+5FEF 10               (       DATA4A.ASM):00562                 FCB     $10
+5FF0 00               (       DATA4A.ASM):00563         D5FF0H  FCB     $00
+5FF1 51               (       DATA4A.ASM):00564                 FCB     $51
+5FF2 45               (       DATA4A.ASM):00565                 FCB     $45
+5FF3 14               (       DATA4A.ASM):00566                 FCB     $14
+5FF4 01               (       DATA4A.ASM):00567                 FCB     $01
+5FF5 55               (       DATA4A.ASM):00568                 FCB     $55
+5FF6 11               (       DATA4A.ASM):00569                 FCB     $11
+5FF7 55               (       DATA4A.ASM):00570                 FCB     $55
+5FF8 00               (       DATA4A.ASM):00571         D5FF8H  FCB     $00
+5FF9 51               (       DATA4A.ASM):00572                 FCB     $51
+5FFA 45               (       DATA4A.ASM):00573                 FCB     $45
+5FFB 14               (       DATA4A.ASM):00574                 FCB     $14
+5FFC 00               (       DATA4A.ASM):00575                 FCB     $00
+5FFD 00               (       DATA4A.ASM):00576                 FCB     $00
+5FFE 54               (       DATA4A.ASM):00577                 FCB     $54
+5FFF 00               (       DATA4A.ASM):00578                 FCB     $00
+                      (       DATA4A.ASM):00579                 END     D5DC4H
+
+Symbol Table:
+[ G] D5DC4H                           5DC4
+[ G] D5DC8H                           5DC8
+[ G] D5DD0H                           5DD0
+[ G] D5DD8H                           5DD8
+[ G] D5DE0H                           5DE0
+[ G] D5DE8H                           5DE8
+[ G] D5DF0H                           5DF0
+[ G] D5DF8H                           5DF8
+[ G] D5E00H                           5E00
+[ G] D5E08H                           5E08
+[ G] D5E10H                           5E10
+[ G] D5E18H                           5E18
+[ G] D5E20H                           5E20
+[ G] D5E28H                           5E28
+[ G] D5E30H                           5E30
+[ G] D5E38H                           5E38
+[ G] D5E40H                           5E40
+[ G] D5E48H                           5E48
+[ G] D5E50H                           5E50
+[ G] D5E58H                           5E58
+[ G] D5E60H                           5E60
+[ G] D5E68H                           5E68
+[ G] D5E70H                           5E70
+[ G] D5E78H                           5E78
+[ G] D5E80H                           5E80
+[ G] D5E88H                           5E88
+[ G] D5E90H                           5E90
+[ G] D5E98H                           5E98
+[ G] D5EA0H                           5EA0
+[ G] D5EA8H                           5EA8
+[ G] D5EB0H                           5EB0
+[ G] D5EB8H                           5EB8
+[ G] D5EC0H                           5EC0
+[ G] D5EC8H                           5EC8
+[ G] D5ED0H                           5ED0
+[ G] D5ED8H                           5ED8
+[ G] D5EE0H                           5EE0
+[ G] D5EE8H                           5EE8
+[ G] D5EF0H                           5EF0
+[ G] D5EF8H                           5EF8
+[ G] D5F00H                           5F00
+[ G] D5F08H                           5F08
+[ G] D5F10H                           5F10
+[ G] D5F18H                           5F18
+[ G] D5F20H                           5F20
+[ G] D5F28H                           5F28
+[ G] D5F30H                           5F30
+[ G] D5F38H                           5F38
+[ G] D5F40H                           5F40
+[ G] D5F48H                           5F48
+[ G] D5F50H                           5F50
+[ G] D5F58H                           5F58
+[ G] D5F60H                           5F60
+[ G] D5F68H                           5F68
+[ G] D5F70H                           5F70
+[ G] D5F78H                           5F78
+[ G] D5F80H                           5F80
+[ G] D5F88H                           5F88
+[ G] D5F90H                           5F90
+[ G] D5F98H                           5F98
+[ G] D5FA0H                           5FA0
+[ G] D5FA8H                           5FA8
+[ G] D5FB0H                           5FB0
+[ G] D5FB8H                           5FB8
+[ G] D5FC0H                           5FC0
+[ G] D5FC8H                           5FC8
+[ G] D5FD0H                           5FD0
+[ G] D5FD8H                           5FD8
+[ G] D5FE0H                           5FE0
+[ G] D5FE8H                           5FE8
+[ G] D5FF0H                           5FF0
+[ G] D5FF8H                           5FF8
