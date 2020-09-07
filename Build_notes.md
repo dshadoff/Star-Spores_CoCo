@@ -76,25 +76,25 @@ corresponding BIN files.
 
 ### Re-assembly of the objects into the final executable:
 
-Pre-Format the RAM, then load all fo the binaries, then save as
+Pre-Format the RAM, then load all of the binaries, then save as
 a complete unit (since thes are not likely to all fit on a single
 diskette or disk image, use explicit drive numbers as appropriate):
 
-PCLEAR 1
-FOR I= &H2D00 to &H66EA STEP 2:POKE I,0:POKE I+1,255:NEXT I
-LOADM "MAIN/BIN"
-LOADM "XPLODE/BIN"
-LOADM "BONUS/BIN"
-LOADM "DATA1/BIN"
-LOADM "PUTSPR/BIN"
-LOADM "DATA2/BIN"
-LOADM "LINDRW/BIN"
-LOADM "DATA3/BIN"
-LOADM "SOUND/BIN"
-LOADM "NOISE/BIN"
-LOADM "SETPT/BIN"
-LOADM "DATA4A/BIN"
-LOADM "DATA4B/BIN"
-LOADM "DATA4C/BIN"
-SAVEM "SPORES/BIN",&H2D00,&H66EA,&H2D00
+`PCLEAR 1
+`FOR I= &H2D00 to &H66EA STEP 2:POKE I,0:POKE I+1,255:NEXT I
+`LOADM "MAIN/BIN"
+`LOADM "XPLODE/BIN"
+`LOADM "BONUS/BIN"
+`LOADM "DATA1/BIN"
+`LOADM "PUTSPR/BIN"
+`LOADM "DATA2/BIN"
+`LOADM "LINDRW/BIN"
+`LOADM "DATA3/BIN"
+`LOADM "SOUND/BIN"
+`LOADM "NOISE/BIN"
+`LOADM "SETPT/BIN"
+`LOADM "DATA4A/BIN"
+`LOADM "DATA4B/BIN"
+`LOADM "DATA4C/BIN"
+`SAVEM "SPORES/BIN",&H2D00,&H66EA,&H2D00
 
