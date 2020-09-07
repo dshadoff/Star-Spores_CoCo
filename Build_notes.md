@@ -62,7 +62,7 @@ Use Disk EDTASM+ to assemble each of the source modules into their
 corresponding BIN files.  Unfortunately, the buffer was not large enough
 to contain the MAIN/ASM file as a single unit.
 
-I had originally used "Suepr Patched EDTASM+", a patch written by Roger Schrag
+I had originally used "Super Patched EDTASM+", a patch written by Roger Schrag
 and published in RAINBOW magazine in Septemebr of 1983 - which allows the
 EDTASM cartridge program to use the full 64KB of RAM for assembly, and also to
 save to disk.  Unfortunately, I was not able to get this version to work on
