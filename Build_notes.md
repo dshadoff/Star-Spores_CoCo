@@ -58,9 +58,43 @@ The files were built using 'lwasm' from the lwtools set, which can be found here
 
 ### 1. On Original Machine or Emulated Color Computer:
 
-(to be added)
+Use Disk EDTASM+ to assemble each of the source modules into their
+corresponding BIN files.  Unfortunately, the buffer was not large enough
+to contain the MAIN/ASM file as a single unit.
 
-### 2. Cross-Assembly on a Modern PC
+I had originally used "Suepr Patched EDTASM+", a patch written by Roger Schrag
+and published in RAINBOW magazine in Septemebr of 1983 - which allows the
+EDTASM cartridge program to use the full 64KB of RAM for assembly, and also to
+save to disk.  Unfortunately, I was not able to get this version to work on
+the XROAR emulator, so I was forced to cross-assemble it.  I may in future
+come back and revisit that EDTASM patch, but not in this release.
 
-(to be added)
+### 2. Cross-Assembly on a Modern PC:
+
+Use the included asm.bat file to assemble all of the sources into their
+corresponding BIN files.
+
+### Re-assembly of the objects into the final executable:
+
+Pre-Format the RAM, then load all fo the binaries, then save as
+a complete unit (since thes are not likely to all fit on a single
+diskette or disk image, use explicit drive numbers as appropriate):
+
+PCLEAR 1
+FOR I= &H2D00 to &H66EA STEP 2:POKE I,0:POKE I+1,255:NEXT I
+LOADM "MAIN/BIN"
+LOADM "XPLODE/BIN"
+LOADM "BONUS/BIN"
+LOADM "DATA1/BIN"
+LOADM "PUTSPR/BIN"
+LOADM "DATA2/BIN"
+LOADM "LINDRW/BIN"
+LOADM "DATA3/BIN"
+LOADM "SOUND/BIN"
+LOADM "NOISE/BIN"
+LOADM "SETPT/BIN"
+LOADM "DATA4A/BIN"
+LOADM "DATA4B/BIN"
+LOADM "DATA4C/BIN"
+SAVEM "SPORES/BIN",&H2D00,&H66EA,&H2D00
 
