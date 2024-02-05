@@ -45,3 +45,15 @@ the sources herein. I have verified that this is functionally the same as the
 original binary (only differences are unused RAM locations' settings from the
 startup RAM format process back in 1984).
 
+## Screenshots
+
+
+### Title Screen:
+
+![alt text](images/spores_title.jpg "Title Screen")
+
+
+### Game Play:
+
+![alt text](images/spores_game.jpg "Game Play")
+
